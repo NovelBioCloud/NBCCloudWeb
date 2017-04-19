@@ -1,0 +1,65 @@
+@import "../common/head.less";
+@import "../common/content.less";
+@import "../common/foot.less";
+.nb-head {
+    background-image: url("../image/title-news.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nb-page-news {
+    .news-content {
+        margin: 80px 0px 150px 0px;
+        .news-title {
+            font-family: MicrosoftYaHei;
+            font-size: 38px;
+            color: #0C253D;
+            letter-spacing: 0;
+        }
+        .news-list {
+            .news-item {
+                margin-bottom: 30px;
+                display: flex;
+                .news-item-image {
+                    flex-basis: 382px;
+                    text-align: center;
+                    border: 0 solid #EEEEEE;
+                    box-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
+                    border-radius: 2px;
+                    img {
+                        border: 0;
+                        width: 380px;
+                        height: 243px;
+                    }
+                }
+                .news-item-text {
+                    margin-left: 30px;
+                    flex: auto;
+                    .news-item-title {
+                        font-family: MicrosoftYaHei;
+                        font-size: 38px;
+                        color: #0C253D;
+                        letter-spacing: 0;
+                        line-height: 1.5em;
+                    }
+                    .news-item-time {
+                        font-family: MicrosoftYaHei;
+                        font-size: 22px;
+                        color: #0D253E;
+                        letter-spacing: 0;
+                        line-height: 1.5em;
+                    }
+                    .news-item-content {
+                        opacity: 0.4;
+                        font-family: MicrosoftYaHei;
+                        font-size: 22px;
+                        color: #0D253E;
+                        letter-spacing: 0;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

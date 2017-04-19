@@ -1,0 +1,332 @@
+@import "../common/head.less";
+@import "../common/content.less";
+@import "../common/foot.less";
+.nb-head {
+    background-image: url("../image/title-about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nb-page-about {
+    .nb-page-about-title {
+        .nb-page-about-ul {
+            display: flex;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 0px;
+            .nb-page-about-li {
+                height: 56px;
+                flex: auto;
+                position: relative;
+                opacity: 1;
+                font-family: MicrosoftYaHei;
+                font-size: 24px;
+                color: #0C253D;
+                letter-spacing: 0;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-transition-property: width;
+                -webkit-transition-property: width;
+                transition-property: width;
+                transition-duration: .5s;
+                -moz-transition-delay: .5s;
+                -webkit-transition-delay: .5s;
+                transition-delay: .5s;
+                text-align: center;
+                display: inline-block;
+                list-style-type: none;
+                width: 80px;
+                margin: 0 20px;
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                .under-line {
+                    color: #ffffff;
+                    width: 120px;
+                    height: 8px;
+                    margin: 2px auto;
+                    border-radius: 4px;
+                    background: #FFFFFF;
+                }
+                &:hover {
+                    .under-line {
+                        background: #1E88F5;
+                        box-shadow: 0 1px 15px 0 rgba(30, 136, 245, 0.30);
+                    }
+                }
+                &.active {
+                    .under-line {
+                        background: #1E88F5;
+                        box-shadow: 0 1px 15px 0 rgba(30, 136, 245, 0.30);
+                    }
+                }
+            }
+        }
+    }
+    .nb-page-about-content {
+        margin-top: 80px;
+        margin-bottom: 150px;
+        .nb-page-about-content-row {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+    .nb-page-about-introduction {
+        .introduction-content {
+            opacity: 0.7;
+            font-family: MicrosoftYaHei;
+            font-size: 22px;
+            color: #0D253E;
+            letter-spacing: 0;
+            line-height: 36px;
+        }
+        .introduction-image {
+            text-align: center;
+            .introduction-map {
+                margin: 50px;
+                display: inline-block;
+                width: 690px;
+                height: 553px;
+                background-image: url("../image/introduction-map.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    .nb-page-about-manager {
+        .manager-description {
+            display: flex;
+            margin-bottom: 30px;
+            .manager-description-content {
+                flex: auto;
+                padding: 50px;
+                .manager-description-content-name {
+                    font-family: MicrosoftYaHei;
+                    font-size: 38px;
+                    color: #0C253D;
+                    letter-spacing: 0;
+                    margin-bottom: 30px;
+                }
+                .manager-description-content-introduction {
+                    opacity: 0.4;
+                    font-family: MicrosoftYaHei;
+                    font-size: 22px;
+                    color: #0D253E;
+                    letter-spacing: 0;
+                    line-height: 30px;
+                }
+            }
+            .manager-description-image {
+                flex: none;
+                flex-basis: 200px;
+            }
+        }
+    }
+    .nb-page-about-culture {
+        .culture-description {
+            .culture-description-title {
+                font-family: MicrosoftYaHei;
+                font-size: 38px;
+                color: #0C253D;
+                letter-spacing: 0;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .culture-description-content {
+                opacity: 0.7;
+                font-family: MicrosoftYaHei;
+                font-size: 22px;
+                color: #0D253E;
+                letter-spacing: 0;
+                line-height: 36px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .nb-page-about-history {
+        .history-info {
+            display: flex;
+            .history-times {
+                flex-basis: 250px;
+                .history-time {
+                    font-family: MicrosoftYaHei;
+                    font-size: 32px;
+                    color: #1E88F5;
+                    letter-spacing: 0;
+                    height: 150px;
+                    line-height: 150px;
+                    margin-bottom: 50px;
+                    text-align: right;
+                }
+            }
+            .history-timelines {
+                padding: 0 80px;
+                .history-timeline {
+                    &:first-child {
+                        margin-top: 55px;
+                    }
+                    &:last-child {
+                        height: 150px;
+                        overflow: hidden;
+                    }
+                    height: 200px;
+                    width:45px;
+                    .history-timeline-image {
+                        height: 200px;
+                        background-image: url("../image/timeline.png");
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            .history-contents {
+                flex: auto;
+                .history-content {
+                    background: #FFFFFF;
+                    border: 0 solid #EEEEEE;
+                    box-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
+                    border-radius: 2px;
+                    margin-bottom: 50px;
+                    height: 150px;
+                    display: flex;
+                    padding-left: 50px;
+                    align-items: center;
+                    .history-content-items {
+                        opacity: 0.7;
+                        .history-content-item {
+                            font-family: PingFangSC-Regular;
+                            font-size: 22px;
+                            color: #001300;
+                            letter-spacing: 0;
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nb-page-about-recruitment {
+        .recruitment-table {
+            background: #FFFFFF;
+            border: 0 solid #EEEEEE;
+            box-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
+            .recruitment-table-title {
+                display: flex;
+                height: 120px;
+                line-height: 120px;
+                .recruitment-table-title-column {
+                    text-align: center;
+                    flex: 1 1 0;
+                    opacity: 0.5;
+                    font-family: MicrosoftYaHei;
+                    font-size: 24px;
+                    color: #0C253D;
+                    overflow: hidden;
+                }
+            }
+            .recruitment-table-row {
+                display: flex;
+                height: 120px;
+                line-height: 120px;
+                &.odd {
+                    background: #F5F8FC;
+                }
+                &.even {
+                    background: #FFFFFF;
+                }
+                .recruitment-table-row-column {
+                    text-align: center;
+                    flex: 1 1 0;
+                    font-family: PingFangSC-Regular;
+                    font-size: 26px;
+                    color: #0C253D;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .nb-page-about-contact {
+        .nb-page-about-contact-lines {
+            display: flex;
+            .nb-page-about-contact-line {
+                flex: auto;
+                text-align: center;
+            }
+            .contact-line-telephone {
+                display: inline-block;
+                height: 8px;
+                width: 128px;
+                background: #1E88F5;
+                box-shadow: 0 1px 15px 0 rgba(30, 136, 245, 0.30);
+                border-radius: 2px 2px 0 0;
+            }
+            .contact-line-email {
+                display: inline-block;
+                height: 8px;
+                width: 128px;
+                background: #4CD964;
+                box-shadow: 0 1px 15px 0 rgba(75, 217, 100, 0.30);
+                border-radius: 2px 2px 0 0;
+            }
+            .contact-line-fax {
+                display: inline-block;
+                height: 8px;
+                width: 128px;
+                background: #FFCC01;
+                box-shadow: 0 1px 15px 0 rgba(255, 203, 0, 0.30);
+                border-radius: 2px 2px 0 0;
+            }
+        }
+        .nb-page-about-contact-contents {
+            display: flex;
+            background: #FFFFFF;
+            border: 0 solid #EEEEEE;
+            box-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
+            border-radius: 2px;
+            .nb-page-about-contact-content {
+                flex: 1 1 0;
+                text-align: center;
+            }
+            .nb-page-about-contact-spliter {
+                flex: none;
+                width: 4px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+            }
+            .contact-spliter {
+                width: 1px;
+                height: 127px;
+                background: #D8D8D8;
+            }
+            .nb-page-about-contact-info {
+                padding: 50px 0px;
+                .contact-title {
+                    opacity: 0.5;
+                    font-family: PingFangSC-Regular;
+                    font-size: 24px;
+                    color: #0C253D;
+                    margin-bottom: 20px;
+                }
+                .contact-detail {
+                    font-family: PingFangSC-Regular;
+                    font-size: 30px;
+                    color: #0C253D;
+                }
+            }
+        }
+        .nb-page-about-contact-map {
+            margin-top: 80px;
+            .nb-page-about-contact-map-title {
+                opacity: 0.5;
+                color: #0C253D;
+                padding: 10px;
+            }
+            .nb-page-about-contact-map-title {
+                padding: 0 10px;
+            }
+        }
+    }
+}

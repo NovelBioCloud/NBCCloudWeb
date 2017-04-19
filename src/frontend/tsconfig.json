@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "allowJs": true,
+        "jsx": "react",
+        "target": "es5",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": [
+            "dom",
+            "es2016",
+            "es2015.promise",
+            "es2015.collection"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "webapp/**",
+        "webapp-src/js-library/**"
+    ]
+}
