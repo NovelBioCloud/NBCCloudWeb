@@ -3,17 +3,17 @@ package com.novelbio.portal.web.home;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.novelbio.portal.base.framework.AbstractController;
-import com.novelbio.portal.base.web.ResultJson;
-import com.novelbio.portal.biz.home.mgmt.MgmtHistory;
-import com.novelbio.portal.biz.home.mgmt.MgmtRecruitment;
+import com.novelbio.portal.biz.mgmt.MgmtHistory;
+import com.novelbio.portal.biz.mgmt.MgmtNews;
+import com.novelbio.portal.biz.mgmt.MgmtRecruitment;
 
 @Controller
 @RequestMapping(value = "/home")
 public class CtrlHome extends AbstractController {
-
+	@Autowired
+	MgmtNews mgmtNews;
 	@Autowired
 	MgmtHistory mgmtHistory;
 	@Autowired
@@ -29,6 +29,26 @@ public class CtrlHome extends AbstractController {
 		return "core-module/home/html/index";
 	}
 
+	@RequestMapping(value = "/productList1")
+	public String productList1() {
+		return "core-module/home/html/productList1";
+	}
+
+	@RequestMapping(value = "/productList2")
+	public String productList2() {
+		return "core-module/home/html/productList2";
+	}
+
+	@RequestMapping(value = "/productList3")
+	public String productList3() {
+		return "core-module/home/html/productList3";
+	}
+
+	@RequestMapping(value = "/productList4")
+	public String productList4() {
+		return "core-module/home/html/productList4";
+	}
+
 	@RequestMapping(value = "/product")
 	public String product() {
 		return "core-module/home/html/product";
@@ -39,28 +59,14 @@ public class CtrlHome extends AbstractController {
 		return "core-module/home/html/news";
 	}
 
+	@RequestMapping(value = "/newsInfo")
+	public String newsInfo() {
+		return "core-module/home/html/newsInfo";
+	}
+
 	@RequestMapping(value = "/about")
 	public String about() {
 		return "core-module/home/html/about";
 	}
 
-	@ResponseBody
-	@RequestMapping("getListHistory")
-	ResultJson getListHistory() {
-		try {
-			return ResultJson.trueResp(mgmtHistory.list());
-		} catch (Exception e) {
-			return ResultJson.falseResp(e.getMessage());
-		}
-	}
-
-	@ResponseBody
-	@RequestMapping("getListRecruitment")
-	ResultJson getListRecruitment() {
-		try {
-			return ResultJson.trueResp(mgmtRecruitment.list());
-		} catch (Exception e) {
-			return ResultJson.falseResp(e.getMessage());
-		}
-	}
 }

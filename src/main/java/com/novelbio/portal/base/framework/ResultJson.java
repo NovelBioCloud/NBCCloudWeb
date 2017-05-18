@@ -11,7 +11,7 @@ public class ResultJson {
 	String message;
 
 	Object result;
-	
+
 	Object file;
 
 	public ResultJson() {
@@ -28,10 +28,10 @@ public class ResultJson {
 		this.result = result;
 	}
 
-	public String toString(){
+	public String toString() {
 		return "state:" + state + ", message:" + message + ", result:" + result;
 	}
-	
+
 	public static final ResultJson TRUE = new ResultJson(true, "操作成功！");
 
 	public static final ResultJson FALSE = new ResultJson(false, "操作失败！");
@@ -43,15 +43,23 @@ public class ResultJson {
 	public static final ResultJson UPDATE_FALSE = new ResultJson(false, "修改失败，此记录不存在或已被删除！");
 
 	public static final ResultJson DELETE_FALSE = new ResultJson(false, "删除失败，此记录不存在或已被删除！");
-	
-	public static final ResultJson NOPOWER = new ResultJson(false,"权限不足");
+
+	public static final ResultJson NOPOWER = new ResultJson(false, "权限不足");
 
 	public static ResultJson trueState(String message) {
 		return new ResultJson(true, message);
 	}
 
+	public static ResultJson trueState() {
+		return new ResultJson(true, "");
+	}
+
 	public static ResultJson trueState(String message, Object result) {
 		return new ResultJson(true, message, result);
+	}
+
+	public static ResultJson falseState() {
+		return new ResultJson(false, "");
 	}
 
 	public static ResultJson falseState(String message) {
@@ -69,7 +77,6 @@ public class ResultJson {
 	public static ResultJson falseState(String message, Object result) {
 		return new ResultJson(false, message, result);
 	}
-
 
 	public boolean isState() {
 		return state;
@@ -103,6 +110,4 @@ public class ResultJson {
 		this.file = file;
 	}
 
-	
-	
 }

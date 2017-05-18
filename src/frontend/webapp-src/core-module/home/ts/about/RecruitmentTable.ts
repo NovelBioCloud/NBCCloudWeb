@@ -58,7 +58,7 @@ export class RecruitmentTable {
     private _loadData(): Promise<Recruitment[]> {
         return new Promise<Recruitment[]>((resolve, reject) => {
             $.ajax({
-                url: 'home/getListRecruitment',
+                url: 'home/recruitment/getList',
                 method: 'post',
                 success: (data) => {
                     if (data.state) {

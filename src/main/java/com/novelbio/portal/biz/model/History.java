@@ -1,18 +1,22 @@
-package com.novelbio.portal.biz.application.domain;
+package com.novelbio.portal.biz.model;
 
 import java.io.Serializable;
 import java.util.Date;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
+@Document
 public class History implements Serializable, Cloneable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
 	private String id;
 
 	@JSONField(format = "yyyy-MM-dd")
@@ -21,6 +25,12 @@ public class History implements Serializable, Cloneable {
 
 	public History() {
 
+	}
+
+	public History(Date time, String content) {
+		super();
+		this.time = time;
+		this.content = content;
 	}
 
 	public History(String id, Date time, String content) {

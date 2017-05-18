@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-<h1>home</h1>
+	<h1>home</h1>
 </body>
 
 

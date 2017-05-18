@@ -11,17 +11,54 @@
 .nb-page-news {
     .news-content {
         margin: 80px 0px 150px 0px;
-        .news-title {
-            font-family: MicrosoftYaHei;
-            font-size: 38px;
-            color: #0C253D;
-            letter-spacing: 0;
+        .study-list {
+            margin-bottom: 50px;
+            .study-title {
+                font-family: MicrosoftYaHei;
+                font-size: 38px;
+                color: #0C253D;
+                letter-spacing: 0;
+            }
+            .study-media {
+                display: flex;
+                .study-media-player {
+                    border-radius: 4px;
+                    flex: auto;
+                    audio {
+                        width: 700px;
+                        height: 448px;
+                    }
+                }
+                .study-media-list {
+                    margin: 15px 35px 15px 15px;
+                    overflow: auto;
+                    .study-media-items {
+                        overflow: hidden;
+                        .study-media-item {
+                            border-radius: 4px;
+                            margin-bottom: 15px;
+                            img {
+                                width: 220px;
+                                height: 136px;
+                            }
+                        }
+                    }
+                    .study-media-pagination {}
+                }
+            }
         }
-        .news-list {
-            .news-item {
+        .message-list {
+            .message-title {
+                font-family: MicrosoftYaHei;
+                font-size: 38px;
+                color: #0C253D;
+                margin-bottom: 30px;
+                letter-spacing: 0;
+            }
+            .message-item {
                 margin-bottom: 30px;
                 display: flex;
-                .news-item-image {
+                .message-item-image {
                     flex-basis: 382px;
                     text-align: center;
                     border: 0 solid #EEEEEE;
@@ -33,24 +70,24 @@
                         height: 243px;
                     }
                 }
-                .news-item-text {
+                .message-item-text {
                     margin-left: 30px;
                     flex: auto;
-                    .news-item-title {
+                    .message-item-title {
                         font-family: MicrosoftYaHei;
                         font-size: 38px;
                         color: #0C253D;
                         letter-spacing: 0;
                         line-height: 1.5em;
                     }
-                    .news-item-time {
+                    .message-item-time {
                         font-family: MicrosoftYaHei;
                         font-size: 22px;
                         color: #0D253E;
                         letter-spacing: 0;
                         line-height: 1.5em;
                     }
-                    .news-item-content {
+                    .message-item-content {
                         opacity: 0.4;
                         font-family: MicrosoftYaHei;
                         font-size: 22px;

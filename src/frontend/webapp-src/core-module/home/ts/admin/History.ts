@@ -12,6 +12,7 @@ export class History {
         this.container = container
         this.element = $('<table></table>').appendTo(container)
         this.element.datagrid({
+            fit: true,
             striped: true,
             idField: 'id',
             singleSelect: true,
@@ -100,7 +101,7 @@ export class History {
     remove(id) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'admin/removeRecruitment',
+                url: 'admin/history/remove',
                 method: 'post',
                 data: { id: id },
                 success: (data) => {
@@ -122,21 +123,21 @@ export class History {
         } = data
         return `<div>
                     <style type="text/css">
-                        .recruitment-dialog-content {
-                            padding : 30px 90px 30px 90px;
+                        .history-dialog-content {
+                            padding : 30px 50px 30px 90px;
                         }
-                        .recruitment-dialog-content td {
+                        .history-dialog-content td {
                             padding : 5px 8px;
                         }
-                        .recruitment-dialog-content input, .recruitment-dialog-content select {
+                        .history-dialog-content input, .history-dialog-content select {
                             width : 300px;
                         }
-                        .recruitment-dialog-content textarea {
+                        .history-dialog-content textarea {
                             width : 300px;
                             height : 180px;
                         }
                     </style>
-                    <div class='recruitment-dialog-content'>
+                    <div class='history-dialog-content'>
                         <form>
                             <input type='hidden' name='id' value ='${id}'/>
                             <table>
@@ -199,7 +200,7 @@ export class History {
     create(postData) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'admin/createHistory',
+                url: 'admin/history/create',
                 data: postData,
                 method: 'post',
                 success: (data) => {
@@ -216,7 +217,7 @@ export class History {
     update(postData) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'admin/updateHistory',
+                url: 'admin/history/update',
                 data: postData,
                 method: 'post',
                 success: (data) => {
@@ -233,7 +234,7 @@ export class History {
     private _loadData(): Promise<any> {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'admin/getListRecruitment',
+                url: 'admin/history/getList',
                 method: 'post',
                 success: (data) => {
                     if (data.state) {

@@ -1,5 +1,5 @@
 
-
+import * as moment from 'moment'
 class History {
     id: string
     time: string
@@ -37,7 +37,8 @@ export class HistoryPanel {
         this.loadData()
     }
     private createTimeUnit(time) {
-        return $(`<div class='history-time'>${time}</div>`)
+        const _time = moment(time).format('YYYY-MM')
+        return $(`<div class='history-time'>${_time}</div>`)
     }
     private createTimelineUnit() {
         return $(`<div class='history-timeline'>
@@ -69,7 +70,7 @@ export class HistoryPanel {
     private _loadData(): Promise<History[]> {
         return new Promise<History[]>((resolve, reject) => {
             $.ajax({
-                url: 'home/getListHistory',
+                url: 'home/history/getList',
                 method: 'post',
                 success: (data) => {
                     if (data.state) {

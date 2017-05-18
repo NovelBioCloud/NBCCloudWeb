@@ -12,6 +12,7 @@ export class Recruitment {
         this.container = container
         this.element = $('<table></table>').appendTo(container)
         this.element.datagrid({
+            fit: true,
             striped: true,
             idField: 'id',
             singleSelect: true,
@@ -105,7 +106,7 @@ export class Recruitment {
     remove(id) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'admin/removeRecruitment',
+                url: 'admin/recruitment/remove',
                 method: 'post',
                 data: { id: id },
                 success: (data) => {
@@ -133,7 +134,7 @@ export class Recruitment {
         return `<div>
                     <style type="text/css">
                         .history-dialog-content {
-                            padding : 30px 90px 30px 90px;
+                            padding : 30px 50px 30px 90px;
                         }
                         .history-dialog-content td {
                             padding : 5px 8px;
@@ -234,7 +235,7 @@ export class Recruitment {
     create(postData) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'admin/createRecruitment',
+                url: 'admin/recruitment/create',
                 data: postData,
                 method: 'post',
                 success: (data) => {
@@ -251,7 +252,7 @@ export class Recruitment {
     update(postData) {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'admin/updateRecruitment',
+                url: 'admin/recruitment/update',
                 data: postData,
                 method: 'post',
                 success: (data) => {
@@ -268,7 +269,7 @@ export class Recruitment {
     private _loadData(): Promise<any> {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'admin/getListRecruitment',
+                url: 'admin/recruitment/getList',
                 method: 'post',
                 success: (data) => {
                     if (data.state) {

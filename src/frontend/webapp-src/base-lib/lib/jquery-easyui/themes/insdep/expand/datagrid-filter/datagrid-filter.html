@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>jQuery EasyUI Demo</title>
-	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
-	<script type="text/javascript" src="../../jquery.min.js"></script>
-	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="datagrid-filter.js"></script>
-	<style>
-		.icon-filter{
-			background:url('filter.png') no-repeat center center;
-		}
-	</style>
-	<script>
+<meta charset="UTF-8">
+<title>jQuery EasyUI Demo</title>
+<link rel="stylesheet" type="text/css"
+	href="../../themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="datagrid-filter.js"></script>
+<style>
+.icon-filter {
+	background: url('filter.png') no-repeat center center;
+}
+</style>
+<script>
 		var data = [
            	{"productid":"FI-SW-01","productname":"Koi","unitcost":10.00,"status":"P","listprice":36.50,"attr1":"Large","itemid":"EST-1"},
         	{"productid":"K9-DL-01","productname":"Dalmation","unitcost":12.00,"status":"P","listprice":18.50,"attr1":"Spotted Adult Female","itemid":"EST-10"},
@@ -65,8 +66,9 @@
 </head>
 <body>
 	<h1>DataGrid Filter Row</h1>
-	
-	<table id="dg" title="DataGrid" style="width:700px;height:250px" data-options="
+
+	<table id="dg" title="DataGrid" style="width: 700px; height: 250px"
+		data-options="
 				singleSelect:true,
 				data:data
 			">
@@ -74,8 +76,10 @@
 			<tr>
 				<th data-options="field:'itemid',width:80">Item ID</th>
 				<th data-options="field:'productid',width:100">Product</th>
-				<th data-options="field:'listprice',width:80,align:'right'">List Price</th>
-				<th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+				<th data-options="field:'listprice',width:80,align:'right'">List
+					Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right'">Unit
+					Cost</th>
 				<th data-options="field:'attr1',width:250">Attribute</th>
 				<th data-options="field:'status',width:60,align:'center'">Status</th>
 			</tr>

@@ -27,7 +27,15 @@ module.exports = {
             target: 'webapp/core-module/home/css/'
         },
         {
+            source: 'webapp-src/core-module/home/less/page/newsInfo.less',
+            target: 'webapp/core-module/home/css/'
+        },
+        {
             source: 'webapp-src/core-module/home/less/page/product.less',
+            target: 'webapp/core-module/home/css/'
+        },
+        {
+            source: 'webapp-src/core-module/home/less/page/productList.less',
             target: 'webapp/core-module/home/css/'
         },
         {
@@ -54,9 +62,19 @@ module.exports = {
             name: 'news.js'
         },
         {
+            source: ['webapp-src/core-module/home/ts/page/newsInfo.ts'],
+            target: 'webapp/core-module/home/js',
+            name: 'newsInfo.js'
+        },
+        {
             source: ['webapp-src/core-module/home/ts/page/product.ts'],
             target: 'webapp/core-module/home/js',
             name: 'product.js'
+        },
+        {
+            source: ['webapp-src/core-module/home/ts/page/productList.ts'],
+            target: 'webapp/core-module/home/js',
+            name: 'productList.js'
         },
         {
             source: ['webapp-src/core-module/home/ts/page/admin.ts'],

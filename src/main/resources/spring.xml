@@ -27,7 +27,7 @@
 	<!-- 实际环境配置文件 -->
 	<context:property-placeholder
 		location="classpath:settings-production.properties" />
-	<context:component-scan base-package="com.novelbio.portal.biz" />
+	<context:component-scan base-package="com.novelbio.portal.biz.mgmt" />
 	<!-- 一些连接属性的设置 -->
 	<mongo:mongo id="mongo" replica-set="${mongo.url}">
 		<!-- 一些连接属性的设置 -->
@@ -47,9 +47,9 @@
 	<mongo:db-factory id="mongoDbFactory" dbname="${mongo.dbName}"
 		mongo-ref="mongo" username="${mongo.username}" password="${mongo.password}" />
 	<!-- 映射转换器，扫描back-package目录下的文件，根据注释，把它们作为mongodb的一个collection的映射 -->
-	<mongo:mapping-converter base-package="com.novelbio.portal.*.*.model" />
+	<mongo:mapping-converter base-package="com.novelbio.portal.biz.model" />
 
 	<!-- mongodb bean的仓库目录，会自动扫描扩展了MongoRepository接口的接口进行注入 -->
-	<mongo:repositories base-package="com.novelbio.portal.*.*.dao" />
+	<mongo:repositories base-package="com.novelbio.portal.biz.repo" />
 	<task:annotation-driven />
 </beans>

@@ -3,61 +3,30 @@ import * as _ from 'lodash'
 import { HistoryPanel } from './HistoryPanel'
 import { RecruitmentTable } from './RecruitmentTable'
 
-interface ContentTabsSupportOptions {
-    index: number
-    size: number
-}
-class ContentTabsSupport {
-    index: number
-    size: number
-    private onChangeSubject = new Subject()
-    constructor(options: ContentTabsSupportOptions) {
-        this.index = options.index
-        this.size = options.size
-    }
-    onChange(onChange: (index) => void) {
-        this.onChangeSubject.subscribe(onChange)
-    }
 
-    go(newIndex: number) {
-        this.index = newIndex % this.size
-        this.onChangeSubject.next(this.index)
-    }
-}
 /**
- * 主面板类，该类展示about页面的全部内容
+ * 该类展示about页面的全部内容
  * 
  * @export
  * @class ContentTabs
  * @extends {ContentTabsSupport}
  */
-export class ContentTabs extends ContentTabsSupport {
+export class ContentTabs {
     private titles: JQuery
     private contents: JQuery
     public static partNames = ['introduction', 'team', 'culture', 'history', 'join', 'contact']
     constructor(partName: string = 'introduction') {
-        super({
-            index: 0,
-            size: 6
-        })
         const element = $('.fn-container-tabs')
         this.titles = $('.fn-about-part-title')
         this.contents = $('.fn-about-part-content')
+        window.addEventListener('hashchange', this.onHashChange.bind(this))
         this.titles.each((index, element) => {
+            $(element).attr('id', ContentTabs.partNames[index])
             $(element).click(() => {
-                if (this.index !== index) {
-                    this.go(index)
-                }
+                this.showPart(ContentTabs.partNames[index])
             })
         })
-        this.onChange(this.change.bind(this))
-        let index = ContentTabs.partNames.findIndex((value) => partName === value)
-        if (index < 0) {
-            index = 0
-        }
-        this.change(index)
-
-
+        this.showPart(partName)
         const historyPanel = new HistoryPanel({
             container: element.find('.fn-historyPanel-container')
         })
@@ -65,9 +34,16 @@ export class ContentTabs extends ContentTabsSupport {
             container: element.find('.fn-recruitmentTable-container')
         })
     }
-    private change(index) {
-        location.hash = ContentTabs.partNames[index]
-        _.times(this.size, (current) => {
+    private onHashChange(e: HashChangeEvent) {
+        e.preventDefault()
+        e.stopImmediatePropagation()
+        const target = e.newURL.substring(e.newURL.indexOf('#') + 1)
+        this.showPart(target)
+    }
+    private showPart(partName) {
+        let index = ContentTabs.partNames.indexOf(partName)
+        index = index >= 0 ? index : 0
+        _.times(ContentTabs.partNames.length, (current) => {
             if (current === index) {
                 this.titles.eq(current).addClass('active')
                 this.contents.eq(current).addClass('active')

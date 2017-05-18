@@ -45,6 +45,11 @@ public class Pointer<T> {
 		return this;
 	}
 
+	public Pointer<T> doAction(Consumer<Pointer<T>> consumer) {
+		consumer.accept(this);
+		return this;
+	}
+
 	public Pointer<T> when(@SuppressWarnings("unchecked") Branch<T>... branchs) {
 		boolean result = false;
 		for (Branch<T> branch : branchs) {

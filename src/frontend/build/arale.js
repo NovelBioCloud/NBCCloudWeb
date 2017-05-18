@@ -171,6 +171,7 @@ function copyTask(moduleService, cb) {
     console.log('copyTask')
     const configs = moduleService.getCopyConfigs()
     async.eachSeries(configs, function (config, cb) {
+        console.log('copy:', config.source)
         gulp.src(config.source)
             .pipe(gulp.dest(config.target))
             .pipe(through.obj(function (file, enc, callback) {

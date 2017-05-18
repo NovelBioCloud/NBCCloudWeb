@@ -1,0 +1,81 @@
+@import "../common/head.less";
+@import "../common/content.less";
+@import "../common/foot.less";
+.nb-head {
+    background-image: url("../image/title-product.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nb-page-productList {
+    .nb-content-row {
+        margin-top: 100px;
+    }
+}
+
+.partContent-content {
+    font-family: MicrosoftYaHei;
+    font-size: 22px;
+    color: #0D253E;
+    letter-spacing: 0;
+    line-height: 32px;
+    .partContent-content-title {
+        font-family: MicrosoftYaHei;
+        font-size: 38px;
+        color: #0C253D;
+        letter-spacing: 0;
+        padding: 20px;
+    }
+    .partContent-content-desc {
+        opacity: 0.4;
+        font-family: MicrosoftYaHei;
+        font-size: 22px;
+        color: #0D253E;
+        letter-spacing: 0;
+        line-height: 30px;
+        padding: 20px;
+    }
+    .item-part {
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        box-shadow: 0 1px 9px 0 rgba(7, 17, 63, 0.08);
+        position: relative;
+        display: flex;
+        padding: 40px 40px;
+        margin: 0px 0px 50px 0px;
+        .item-part-left {
+            .item-part-title {
+                width: 470px;
+                height: 40px;
+                background: #6DD2FF;
+                border-radius: 2px;
+                font-family: MicrosoftYaHei;
+                font-size: 20px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                line-height: 40px;
+                padding-left: 20px;
+                margin-bottom: 40px;
+            }
+            .item-part-img {
+                img {
+                    width: 470px;
+                    height: 264px;
+                }
+            }
+        }
+        .item-part-right {
+            .item-part-content {
+                padding: 0px 0px 0px 40px;
+                height: 332px;
+                opacity: 0.4;
+                font-family: MicrosoftYaHei;
+                font-size: 22px;
+                color: #0D253E;
+                letter-spacing: 0;
+                line-height: 32px;
+            }
+        }
+    }
+}

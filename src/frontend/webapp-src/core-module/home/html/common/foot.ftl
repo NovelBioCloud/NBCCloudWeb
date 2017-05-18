@@ -6,7 +6,7 @@
             <ul>
                 <li><a href='home/product#analysis'>数据分析</a></li>
                 <li><a href='home/product#report'>自动化报告</a></li>
-                <li><a href='home/product#example'>实验室管理</a></li>
+                <li><a href='home/product#sample'>实验室管理</a></li>
                 <li><a href='home/product#office'>智能办公</a></li>
             </ul>
         </div>
@@ -35,10 +35,7 @@
         </div>
         <div class='nb-foot-col-code nb-foot-info'>
             <div class='code-image'>
-                <img src='common-resource/themes/novelbio/images/ma.jpg'/>/
-            </div>
-            <div class='code-image'>
-                <img src='common-resource/themes/novelbio/images/ma.jpg'/>/
+                <img src='common-resource/themes/novelbio/images/ma.jpg'/>
             </div>
         </div>
     </div>

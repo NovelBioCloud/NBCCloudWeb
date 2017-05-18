@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>jQuery EasyUI</title>
-	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
-	<style type="text/css">
-		.datagrid-header-rownumber,.datagrid-cell-rownumber{
-			width:35px;
-		}
-	</style>
-	<script type="text/javascript" src="../../jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="datagrid-bufferview.js"></script>
-	<script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery EasyUI</title>
+<link rel="stylesheet" type="text/css"
+	href="../../themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+<style type="text/css">
+.datagrid-header-rownumber, .datagrid-cell-rownumber {
+	width: 35px;
+}
+</style>
+<script type="text/javascript" src="../../jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="datagrid-bufferview.js"></script>
+<script>
 		$(function(){
 			var rows = [];
 			for(var i=1; i<=800; i++){
@@ -35,10 +36,10 @@
 </head>
 <body>
 	<h1>DataGrid - BufferView</h1>
-	
-	<table id="tt" class="easyui-datagrid" style="width:700px;height:250px"
-			title="DataGrid - BufferView" 
-			data-options="view:bufferview,rownumbers:true,singleSelect:true,autoRowHeight:false,pageSize:50">
+
+	<table id="tt" class="easyui-datagrid"
+		style="width: 700px; height: 250px" title="DataGrid - BufferView"
+		data-options="view:bufferview,rownumbers:true,singleSelect:true,autoRowHeight:false,pageSize:50">
 		<thead>
 			<tr>
 				<th field="inv" width="80">Inv No</th>

@@ -1,13 +1,15 @@
-package com.novelbio.portal.biz.application.domain;
+package com.novelbio.portal.biz.model;
 
 import java.io.Serializable;
 import java.util.Date;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
+@Document
 public class Recruitment implements Serializable, Cloneable {
 	/**
 	 * 
