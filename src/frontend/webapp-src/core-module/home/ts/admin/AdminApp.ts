@@ -7,6 +7,7 @@ import { History } from './History'
 import { News } from './News'
 import { Video } from './Video'
 import { Information } from './Information'
+import { CloudFile } from './CloudFile'
 export class AdminApp {
     template: string = `
     	<div title="信息管理" style="margin:auto;padding:5px 5px 5px 10px;">
@@ -18,6 +19,7 @@ export class AdminApp {
     news: News
     video: Video
     information: Information
+    cloudFile: CloudFile
     private panel
     constructor() {
         this.container = $(document.body)
@@ -31,6 +33,7 @@ export class AdminApp {
         this.news = this.createNews()
         this.video = this.createVideo()
         this.information = this.createInformation()
+        this.cloudFile = this.createCloudFile()
         setTimeout(() => this.resize(), 100)
         $(window).resize(() => {
             this.resize()
@@ -104,5 +107,20 @@ export class AdminApp {
         })
         return information
     }
+
+    createCloudFile(): CloudFile {
+        let cloudFile = new CloudFile()
+        this.element.tabs('add', {
+            title: cloudFile.id,
+            content: '',
+            closable: false,
+        })
+        const cloudFileContainer = this.element.tabs('getTab', cloudFile.id)
+        cloudFile.init({
+            container: cloudFileContainer
+        })
+        return cloudFile
+    }
+
 }
 

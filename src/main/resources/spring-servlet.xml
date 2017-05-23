@@ -47,7 +47,9 @@
 	<mvc:cors>
 		<mvc:mapping path="/**" />
 	</mvc:cors>
-
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
 	<!--通用视图解析器 -->
 	<bean id="viewResolverCommon"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

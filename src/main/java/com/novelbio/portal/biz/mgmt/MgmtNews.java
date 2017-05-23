@@ -25,8 +25,8 @@ public class MgmtNews {
 
 		News news = repoNews.findOne(id);
 		news.setDescription(description);
-		news.setImage(doc);
-		news.setLink(image);
+		news.setImage(image);
+		news.setLink(doc);
 		news.setPublishDate(publishDate);
 		news.setTitle(title);
 		repoNews.save(news);
@@ -64,5 +64,9 @@ public class MgmtNews {
 		Pageable pageable = new PageRequest(0, size, sort);
 		Page<News> page = repoNews.findAll(pageable);
 		return page.getContent();
+	}
+
+	public News get(String id) {
+		return repoNews.findOne(id);
 	}
 }

@@ -14,7 +14,7 @@
         <div class='nb-page-about-contact-content'>
             <div class='nb-page-about-contact-info'>
                 <div class='contact-title'>联系电话</div>
-                <div class='contact-detail'>电话</div>
+                <div class='contact-detail'>021-80322688</div>
             </div>
         </div>
         <div class='nb-page-about-contact-spliter'>
@@ -23,24 +23,21 @@
         <div class='nb-page-about-contact-content'>
             <div class='nb-page-about-contact-info'>
                 <div class='contact-title'>邮件</div>
-                <div class='contact-detail'>电话</div>
+                <div class='contact-detail'>tech@novelbio.com</div>
             </div>  
         </div>
         <div class='nb-page-about-contact-spliter'>
             <div class='contact-spliter'></div>
         </div>
         <div class='nb-page-about-contact-content'>
-        <div class='nb-page-about-contact-info'>
-                <div class='contact-title'>传真</div>
-                <div class='contact-detail'>电话</div>
+            <div class='nb-page-about-contact-info'>
+                <div class='contact-title'>微信号</div>
+                <div class='contact-detail'>烈冰生物</div>
             </div>
         </div>
     </div>
     <div class='nb-page-about-contact-map'>
-        <div class='nb-page-about-contact-map-title'>地址：</div>
-        <div class='nb-page-about-contact-map-container'>
-            <p> </p>
-        </div>
-
+        <div class='nb-page-about-contact-map-title'>地址：上海市闵行区新骏环路138号漕河泾开发区2号楼2F</div>
+        <div class='nb-page-about-contact-map-container'></div>
     </div>
 </div>

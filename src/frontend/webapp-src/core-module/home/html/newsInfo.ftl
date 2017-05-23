@@ -13,7 +13,7 @@
 	<@page.body>
 	<div class='nb-content nb-page-newsInfo'>
 		<div class='nb-content-row'>
-			<div class='.fn-content'></div>
+			<div class='fn-content'></div>
 		</div>
 	</div>
 	</@page.body>

@@ -149,7 +149,7 @@ export class News {
                                 <tr>
                                     <td>文档链接:</td>
                                     <td><input class="easyui-textbox fn-link" type="text" name="link"
-                                    data-options="required:true" value="${link}"></input>
+                                    data-options="required:true,validType:'url'" value="${link}"></input>
                                     <span class='fn-refresh' style='cursor:pointer;'><label>刷新</label></span></td>
                                 </tr>
                                 <tr>

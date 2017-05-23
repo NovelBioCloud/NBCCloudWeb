@@ -48,6 +48,15 @@ export class Video {
                 { title: '简介', field: 'description', width: 500 },
             ]]
         })
+        window['formatter'] = function (row) {
+            let s = `<div>
+                <div style="font-weight:bold">${row.name}</div>
+                <div>
+                    <img style="max-width:50px;max-height:50px;" src="${row.inputStream}"></img>
+                </div>
+            </div>`
+            return s
+        }
         this.loadData()
     }
     resize() {
@@ -126,6 +135,7 @@ export class Video {
             publishDate = '',
             description = '',
         } = data
+
         return `<div>
                     <style type="text/css">
                         .video-dialog-content {
@@ -163,8 +173,21 @@ export class Video {
                                 </tr>
                                 <tr>
                                     <td>图片链接:</td>
-                                    <td><input class="easyui-textbox" type="text" name="image"
-                                    data-options="required:true,validType:'url'" value="${image}"></input></td>
+                                    <td>
+                                        <input class="easyui-combobox" name="image" value="${image}"
+                                         style="width:100%;" data-options="
+                                            url: 'cloudFile/getImageList',
+                                            method: 'get',
+                                            valueField: 'inputStream',
+                                            textField: 'text',
+                                            panelWidth: 350,
+                                            panelHeight: 'auto',
+                                            formatter: formatter,
+                                            label: 'name:',
+                                            labelPosition: 'top'
+                                            ">
+                                    </td>
+
                                 </tr>
                                 <tr>
                                     <td>描述:</td>

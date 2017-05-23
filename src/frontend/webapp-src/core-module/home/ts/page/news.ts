@@ -91,10 +91,10 @@ class NewsModule {
     createItem(data) {
         const item = $(this.itemTemplate).appendTo(this.element.find('.fn-message-items'))
         item.find('.fn-image').prop('src', data.image).click(() => {
-            console.log(data)
+            window.open('home/newsInfo?id=' + data.id)
         })
         item.find('.fn-title').html(data.title).click(() => {
-            console.log(data)
+            window.open('home/newsInfo?id=' + data.id)
         })
         item.find('.fn-publishDate').html(moment(data.publishDate).format('YYYY-MM-DD'))
         item.find('.fn-description').html(data.description)

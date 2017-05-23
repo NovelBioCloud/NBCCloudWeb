@@ -32,6 +32,16 @@ public class CtrlHomeNews extends AbstractController {
 	}
 
 	@ResponseBody
+	@RequestMapping("get")
+	ResultJson get(String id) {
+		try {
+			return ResultJson.trueState("", mgmtNews.get(id));
+		} catch (Exception e) {
+			return ResultJson.falseState(e.getMessage());
+		}
+	}
+
+	@ResponseBody
 	@RequestMapping("getLastList")
 	ResultJson getLastList(int size) {
 		try {
