@@ -1,6 +1,5 @@
 import * as polyfill from '../common/polyfill'
 
-
 import { ContentTabs } from '../about/ContentTabs'
 import * as $ from 'jquery'
 import * as qs from 'querystring'
@@ -14,7 +13,6 @@ $(() => {
 class NewsInfo {
 
     container: JQuery
-
     init({ container }) {
         this.container = container
     }

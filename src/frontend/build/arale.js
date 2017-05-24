@@ -88,9 +88,7 @@ function lessTask(moduleService, cb) {
             .pipe(less())
             .pipe(gulpif(!moduleService.isDev(), cleanCSS()))
             .pipe(gulp.dest(config.target))
-            .pipe(through.obj(function (file, enc, callback) {
-                cb();
-            }));
+            .on('end', cb);
     }, cb)
 }
 
@@ -107,9 +105,7 @@ function es5Task(moduleService, cb) {
             .pipe(concat(config.name)) //
             .pipe(gulpif(moduleService.isDev(), sourcemaps.write())) //
             .pipe(gulp.dest(config.target))
-            .pipe(through.obj(function (file, enc, callback) {
-                cb();
-            }));
+            .on('end', cb);
     }, cb)
 }
 function es6Task(moduleService, cb) {
@@ -133,9 +129,7 @@ function es6Task(moduleService, cb) {
             .pipe(buffer())
             .pipe(gulpif(!dev, uglify()))
             .pipe(gulp.dest(target))
-            .pipe(through.obj(function (file, enc, callback) {
-                cb();
-            }));
+            .on('end', cb);
     }, cb)
 }
 function tsTask(moduleService, cb) {
@@ -162,21 +156,16 @@ function tsTask(moduleService, cb) {
             .pipe(buffer())
             .pipe(gulpif(!dev, uglify()))
             .pipe(gulp.dest(target))
-            .pipe(through.obj(function (file, enc, callback) {
-                cb();
-            }));
+            .on('end', cb);
     }, cb)
 }
 function copyTask(moduleService, cb) {
     console.log('copyTask')
     const configs = moduleService.getCopyConfigs()
     async.eachSeries(configs, function (config, cb) {
-        console.log('copy:', config.source)
         gulp.src(config.source)
             .pipe(gulp.dest(config.target))
-            .pipe(through.obj(function (file, enc, callback) {
-                cb();
-            }));
+            .on('end', cb);
     }, cb)
 }
 

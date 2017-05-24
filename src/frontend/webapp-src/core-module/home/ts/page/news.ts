@@ -26,36 +26,57 @@ class StudyModule {
             <h1>学习资料</h1>
         </div>
         <div class='study-media'>
-            <div class='study-media-player'>
-                <img class='fn-image1'/>
+            <div class='fn-first-item-container study-media-player'>
             </div>
             <div class='study-media-list'>
-                <div class='study-media-items'>
-                    <div class='study-media-item'>
-                        <img class='fn-image2'/>
-                    </div>
-                    <div class='study-media-item'>
-                        <img class='fn-image3'/>
-                    </div>
-                    <div class='study-media-item'>
-                        <img class='fn-image4'/>
-                    </div>
+                <div class='fn-items-container study-media-items'>
                 </div>
                 <div class='study-media-pagination'>
                 </div>
             </div>
         </div>
     </div>`
+    firstItemTemplate: string = `<div class='study-media-item firstItem'>
+        <img class='fn-image'/>
+    </div>`
+    itemTemplate: string = `<div class='study-media-item'>
+        <img class='fn-image'/>
+    </div>`
+    element: JQuery
     init({ container }) {
-        $(this.template).appendTo(container)
+        this.element = $(this.template).appendTo(container)
         this.loadData().then(data => {
             if (data.state) {
-
+                const result: any[] = data.result
+                result.forEach((item, index) => {
+                    if (index === 0) {
+                        this.createFirstItem(item)
+                    }
+                    this.createItem(item)
+                })
             }
         })
     }
     loadData() {
         return axios.post('home/video/getList').then(resp => resp.data)
+    }
+    createFirstItem(data) {
+        this.element.find('.fn-first-item-container').empty()
+        const item = $(this.firstItemTemplate).appendTo(this.element.find('.fn-first-item-container'))
+        item.find('.fn-image').prop('src', data.image).click(() => {
+            data.link && window.open(data.link)
+        })
+    }
+    createItem(data) {
+        const item = $(this.itemTemplate).appendTo(this.element.find('.fn-items-container'))
+        item.find('.fn-image').prop('src', data.image).click(() => {
+            this.createFirstItem(data)
+        })
+        item.find('.fn-title').html(data.title).click(() => {
+            this.createFirstItem(data)
+        })
+        item.find('.fn-publishDate').html(moment(data.publishDate).format('YYYY-MM-DD'))
+        item.find('.fn-description').html(data.description)
     }
 }
 

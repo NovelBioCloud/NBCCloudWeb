@@ -49,8 +49,8 @@
                     该模块详细记录了实验物种、样本名、样本存储冰箱位置等信息，实验进程划分为收样、抽样、建库、上机四个步骤，大幅提高实验室管理效率。
                 </div>
                 <div class='product-item-tags clearfix'> 
-                    <a href='home/productList1#part1'><span class='product-item-tag'>样本管理</span></a>
-                    <a href='home/productList1#part1'><span class='product-item-tag'>实验管理</span></a>
+                    <a href='home/productList3#part1'><span class='product-item-tag'>样本管理</span></a>
+                    <a href='home/productList3#part1'><span class='product-item-tag'>实验管理</span></a>
                 </div>
             </div>
         </div>
@@ -61,10 +61,10 @@
                     智能办公结合订单管理、权限设置、销售管理、财务系统与到款进度管理，改变传统工作模式，轻松实现企业管理智能化。
                 </div>
                 <div class='product-item-tags clearfix'> 
-                    <a href='home/productList1#part1'><span class='product-item-tag'>订单管理</span></a>
-                    <a href='home/productList1#part1'><span class='product-item-tag'>权限设置</span></a>
-                    <a href='home/productList1#part1'><span class='product-item-tag'>销售管理</span></a>
-                    <a href='home/productList1#part1'><span class='product-item-tag'>回款管理</span></a>
+                    <a href='home/productList4#part1'><span class='product-item-tag'>订单管理</span></a>
+                    <a href='home/productList4#part1'><span class='product-item-tag'>权限设置</span></a>
+                    <a href='home/productList4#part1'><span class='product-item-tag'>销售管理</span></a>
+                    <a href='home/productList4#part1'><span class='product-item-tag'>回款管理</span></a>
                 </div>
             </div>
             <div class='product-item-image product-item-padding-left'>

@@ -5,11 +5,11 @@ module.exports = {
     ],
     copy: [
         {
-            source: 'webapp-src/core-module/home/html/**',
+            source: 'webapp-src/core-module/home/html/**/*',
             target: 'webapp/core-module/home/html/'
         },
         {
-            source: 'webapp-src/core-module/home/image/**',
+            source: 'webapp-src/core-module/home/image/**/*',
             target: 'webapp/core-module/home/image/'
         }
     ],

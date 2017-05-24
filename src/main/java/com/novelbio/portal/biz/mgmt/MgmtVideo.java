@@ -22,7 +22,6 @@ public class MgmtVideo {
 	RepoVideo repoVideo;
 
 	public void update(String id, String title, String description, String image, String link, Date publishDate) {
-
 		Video video = repoVideo.findOne(id);
 		video.setDescription(description);
 		video.setImage(image);

@@ -5,7 +5,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>报告形式</div>
             <div class='item-part-img'>
-                <img></img>
+                <img src='core-module/home/image/image2-1.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -18,7 +18,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>一键化设置</div>
             <div class='item-part-img'>
-                <img></img>
+                <img src='core-module/home/image/image2-2.png'></img>
             </div>
         </div>
         <div class='item-part-right'>

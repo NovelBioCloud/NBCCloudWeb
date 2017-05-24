@@ -12,7 +12,6 @@
 	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="common-resource/themes/${theme}/images/logo.png" type="image/x-icon">
-
 	<link rel="stylesheet" type="text/css" href="base-lib/lib/toastr/toastr.css"></link>
 	<link rel="stylesheet" type="text/css" href="base-lib/lib/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="base-lib/lib/bootstrap/css/bootstrap.min.css" />
