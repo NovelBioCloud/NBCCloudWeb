@@ -1,7 +1,6 @@
 package com.novelbio.portal.web.cloudfile;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,8 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.novelbio.portal.base.framework.ResultJson;
 import com.novelbio.portal.biz.entity.CloudFileEntity;
-import com.novelbio.portal.biz.entity.CloudFileView;
 import com.novelbio.portal.biz.mgmt.MgmtCloudFile;
 import com.novelbio.portal.biz.mgmt.MgmtCloudFileEntity;
 import com.novelbio.portal.biz.mgmt.MgmtCloudFileView;
@@ -43,7 +42,7 @@ public class CtrlCloudFile {
 
 	@RequestMapping("getImageList")
 	@ResponseBody
-	List<CloudFileView> getImageList() {
-		return mgmtCloudFileView.getImageList();
+	ResultJson getImageList() {
+		return ResultJson.trueState(null, mgmtCloudFileView.getImageList());
 	}
 }

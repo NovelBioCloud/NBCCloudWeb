@@ -13,5 +13,7 @@
     <div class='introduction-content'>
         烈冰科技成立于2010年，总部位于上海市漕河泾高科技浦江园区。2013年3月，烈冰科技—西安研发中心成立，引进大量IT人才。同年7月，北京分公司成立。截止目前，烈冰科技拥有广州、沈阳、重庆、武汉、南京、杭州等多个办事处，销售网络遍布全国各地。
     </div>
-    <div></div>    
+    <div>
+        <img src='core-module/home/image/introduction-02.jpg' style='width:100%;margin: 50px 0px 0px 0px;'></img>
+    </div>    
 </div>

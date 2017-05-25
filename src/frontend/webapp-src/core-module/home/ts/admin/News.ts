@@ -1,6 +1,7 @@
 import * as _ from 'lodash'
 import * as moment from 'moment'
 import axios from 'axios'
+import { ImageSelector } from '../imageSelector/ImageSelector'
 declare const $: any
 export class News {
     element: JQuery
@@ -164,7 +165,9 @@ export class News {
                                 <tr>
                                     <td>图片链接:</td>
                                     <td><input class="easyui-textbox" type="text" name="image"
-                                    data-options="required:true,validType:'url'" value="${image}"></input></td>
+                                    data-options="required:true,validType:'url'" value="${image}"></input>
+                                    <button class='fn-add-image' type='button'>选择</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>描述:</td>
@@ -215,6 +218,17 @@ export class News {
         })
         dialog.dialog('body').append(dialogContent)
         $.parser.parse(dialogContent)
+        dialogContent.find('.fn-add-image').click(() => {
+            new ImageSelector().init({
+                isSingleSelect: true,
+                onSelect: (data) => {
+                    if (data) {
+                        dialogContent.find('[name="image"]')
+                            .textbox('setValue', `http://docsite.novelbrain.com/NBCCloudWeb/cloudFile/getInputStream?id=` + data.id)
+                    }
+                }
+            })
+        })
         dialog.dialog('open').dialog('center')
     }
     create(postData) {
