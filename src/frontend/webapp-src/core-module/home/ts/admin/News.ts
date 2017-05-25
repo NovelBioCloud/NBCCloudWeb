@@ -149,8 +149,7 @@ export class News {
                                 <tr>
                                     <td>文档链接:</td>
                                     <td><input class="easyui-textbox fn-link" type="text" name="link"
-                                    data-options="required:true,validType:'url'" value="${link}"></input>
-                                    <span class='fn-refresh' style='cursor:pointer;'><label>刷新</label></span></td>
+                                    data-options="required:true,validType:'url'" value="${link}"></input></td>
                                 </tr>
                                 <tr>
                                     <td>标题:</td>
@@ -216,19 +215,6 @@ export class News {
         })
         dialog.dialog('body').append(dialogContent)
         $.parser.parse(dialogContent)
-        dialogContent.find('.fn-refresh').click(() => {
-            const path = dialogContent.find('.fn-link').val()
-            axios.post('http://docsite.novelbrain.com/docsite/api/getDocInfo?path=' + path).then((data) => {
-                console.log(data)
-            }).catch(() => {
-                $.messager.show({
-                    title: '消息提示',
-                    msg: `获取数据失败`,
-                    icon: 'error',
-                    fn: () => { }
-                })
-            })
-        })
         dialog.dialog('open').dialog('center')
     }
     create(postData) {
