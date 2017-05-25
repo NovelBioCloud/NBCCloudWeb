@@ -35,7 +35,10 @@ public class CtrlAdmin extends AbstractController {
 	@ResponseBody
 	ResultJson isLogin(HttpSession session) {
 		UserEntity userEntity = (UserEntity) session.getAttribute("user");
-		boolean flag = userEntity.isLogin();
+		boolean flag = false;
+		if (userEntity != null && userEntity.isLogin()) {
+			flag = true;
+		}
 		return new ResultJson(flag, "");
 	}
 
