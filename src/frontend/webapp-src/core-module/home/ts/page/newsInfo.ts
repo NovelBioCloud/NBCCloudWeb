@@ -13,6 +13,7 @@ $(() => {
 class NewsInfo {
 
     container: JQuery
+    timer: any
     init({ container }) {
         this.container = container
     }
@@ -32,7 +33,23 @@ class NewsInfo {
         }
     }
     showSrc(link) {
-        this.container.html(`<iframe src='${link}' style='border:0px;width:100%;'></iframe>`)
+        this.timer && window.clearInterval(this.timer)
+        this.container.empty()
+        const $iframe = $(`<iframe src='${link}' style='border:0px;width:100%;min-height: 1000px;' scrolling="no"></iframe>`)
+        this.container.append($iframe)
+        // 定义一个函数，定时调用并刷新iframe高度  
+        function reinitIframe() {
+            const iframe = $iframe.get(0) as HTMLIFrameElement
+            try {
+                let bHeight = iframe.contentWindow.document.body.scrollHeight
+                let dHeight = iframe.contentWindow.document.documentElement.scrollHeight
+                let height = Math.max(bHeight, dHeight)
+                iframe.height = height + ''
+            } catch (ex) {
+                console.log(ex)
+            }
+        }
+        this.timer = window.setInterval(reinitIframe, 500)
     }
     showMessage(message: string = '') {
         this.container.html(message)

@@ -50,7 +50,7 @@ public class CtrlHomeHistory extends AbstractController {
 					}
 				}
 			});
-			List<History> result = historyList.stream().limit(10).collect(Collectors.toList());
+			List<History> result = historyList.stream().limit(5).collect(Collectors.toList());
 			return ResultJson.trueState("", result);
 		} catch (Exception e) {
 			return ResultJson.falseState(e.getMessage());

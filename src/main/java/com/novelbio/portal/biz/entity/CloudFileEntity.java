@@ -3,11 +3,13 @@ package com.novelbio.portal.biz.entity;
 import java.nio.file.Path;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Service;
 
 import com.novelbio.base.fileOperate.FileOperate;
 import com.novelbio.portal.biz.mgmt.ConfigService;
 import com.novelbio.portal.biz.model.CloudFile;
 
+@Service
 public class CloudFileEntity extends CloudFile {
 	private ConfigService configService;
 

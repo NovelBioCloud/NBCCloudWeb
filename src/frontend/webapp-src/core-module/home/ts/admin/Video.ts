@@ -173,21 +173,8 @@ export class Video {
                                 </tr>
                                 <tr>
                                     <td>图片链接:</td>
-                                    <td>
-                                        <input class="easyui-combobox" name="image" value="${image}"
-                                         style="width:100%;" data-options="
-                                            url: 'cloudFile/getImageList',
-                                            method: 'get',
-                                            valueField: 'inputStream',
-                                            textField: 'text',
-                                            panelWidth: 350,
-                                            panelHeight: 'auto',
-                                            formatter: formatter,
-                                            label: 'name:',
-                                            labelPosition: 'top'
-                                            ">
-                                    </td>
-
+                                    <td><input class="easyui-textbox" name="image" value="${image}"
+                                    data-options="required:true,validType:'datebox'" value="${title}"></input></td>
                                 </tr>
                                 <tr>
                                     <td>描述:</td>
