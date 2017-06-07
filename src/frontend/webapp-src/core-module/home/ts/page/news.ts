@@ -37,7 +37,9 @@ class StudyModule {
         </div>
     </div>`
     firstItemTemplate: string = `<div class='study-media-item firstItem'>
-        <img class='fn-image'/>
+        <video class='fn-video'controls="controls" style='width: 580px;height: 440px;'>
+            您的浏览器不支持 video 标签。
+        </video>
     </div>`
     itemTemplate: string = `<div class='study-media-item'>
         <img class='fn-image'/>
@@ -63,9 +65,7 @@ class StudyModule {
     createFirstItem(data) {
         this.element.find('.fn-first-item-container').empty()
         const item = $(this.firstItemTemplate).appendTo(this.element.find('.fn-first-item-container'))
-        item.find('.fn-image').prop('src', data.image).click(() => {
-            data.link && window.open(data.link)
-        })
+        item.find('.fn-video').prop('src', data.link)
     }
     createItem(data) {
         const item = $(this.itemTemplate).appendTo(this.element.find('.fn-items-container'))
@@ -89,10 +89,10 @@ class NewsModule {
     </div>`
     itemTemplate: string = `<div class='message-item'>
         <div class='message-item-image'>
-            <img class='fn-image'/>
+            <img class='fn-image' style='cursor:pointer;'/>
         </div>
         <div class='message-item-text'>
-            <div class='fn-title message-item-title'></div>
+            <div class='fn-title message-item-title' style='cursor:pointer;'></div>
             <div class='fn-publishDate message-item-time'></div>
             <div class='fn-description message-item-content'>
             </div>

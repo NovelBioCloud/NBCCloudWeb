@@ -4,73 +4,71 @@
             <div class='part-content'>
                 <div class='part-content-main'>
                 <div class='part-items'>
-                    <div class='part-item'>
-                        <div class='part-item-content'>
-                            <div class='part-item-content-image'>
-                                <a href='home/product#analysis'>
+                    <a href='home/product#analysis'>
+                        <div class='part-item'>
+                            <div class='part-item-content'>
+                                <div class='part-item-content-image'>
                                     <div class='part-item-content-image-png part-item-content-image-png1'>
                                     </div>
-                                </a>
+                                </div>
+                                <div class='part-item-content-title'>数据分析</div>
+                                <ul class='part-item-content-infos'>
+                                    <li class='part-item-content-info'>定制流程</li>
+                                    <li class='part-item-content-info'>项目管理</li>
+                                    <li class='part-item-content-info'>任务监控</li>
+                                    <li class='part-item-content-info'>基因组浏览器</li>
+                                    <li class='part-item-content-info'>数据库</li>
+                                </ul>
                             </div>
-                            <div class='part-item-content-title'>数据分析</div>
-                            <ul class='part-item-content-infos'>
-                                <li class='part-item-content-info'>分析平台</li>
-                                <li class='part-item-content-info'>项目监控</li>
-                                <li class='part-item-content-info'>数据库管理</li>
-                                <li class='part-item-content-info'>分析工具</li>
-                                <li class='part-item-content-info'>开发者工具</li>
-                            </ul>
                         </div>
-                    </div>
-                    <div class='part-item'>
-                        <div class='part-item-content'>
-                            <div class='part-item-content-image'>
-                                <a href='home/product#report'>
+                    </a>
+                    <a href='home/product#report'>
+                        <div class='part-item'>
+                            <div class='part-item-content'>
+                                <div class='part-item-content-image'>
                                     <div class='part-item-content-image-png part-item-content-image-png2'>
                                     </div>
-                                </a>
+                                </div>
+                                <div class='part-item-content-title'>自动报告</div>
+                                <ul class='part-item-content-infos'>
+                                    <li class='part-item-content-info'>报告形式</li>
+                                    <li class='part-item-content-info'>一键化设置</li>
+                                </ul>
                             </div>
-                            <div class='part-item-content-title'>自动报告</div>
-                            <ul class='part-item-content-infos'>
-                                <li class='part-item-content-info'>Mapping报告</li>
-                                <li class='part-item-content-info'>样式图一键化设置</li>
-                            </ul>
                         </div>
-                    </div>
-                    <div class='part-item'>
-                        <div class='part-item-content'>
-                            <div class='part-item-content-image'>
-                                <a href='home/product#sample'>
+                    </a>
+                    <a href='home/product#sample'>
+                        <div class='part-item'>
+                            <div class='part-item-content'>
+                                <div class='part-item-content-image'>
                                     <div class='part-item-content-image-png part-item-content-image-png3'>
                                     </div>
-                                </a>
+                                </div>
+                                <div class='part-item-content-title'>实验室管理</div>
+                                <ul class='part-item-content-infos'>
+                                    <li class='part-item-content-info'>样本管理</li>
+                                    <li class='part-item-content-info'>实验管理</li>
+                                </ul>
                             </div>
-                            <div class='part-item-content-title'>实验室管理</div>
-                            <ul class='part-item-content-infos'>
-                                <li class='part-item-content-info'>实验室管理</li>
-                                <li class='part-item-content-info'>实验管理</li>
-                                <li class='part-item-content-info'>样本管理</li>
-                            </ul>
                         </div>
-                    </div>
-                    <div class='part-item'>
-                        <div class='part-item-content'>
-                            <div class='part-item-content-image'>
-                                <a href='home/product#office'>
+                    </a>
+                    <a href='home/product#office'>
+                        <div class='part-item'>
+                            <div class='part-item-content'>
+                                <div class='part-item-content-image'>
                                     <div class='part-item-content-image-png part-item-content-image-png4'>
                                     </div>
-                                </a>
+                                </div>
+                                <div class='part-item-content-title'>智能办公</div>
+                                <ul class='part-item-content-infos'>
+                                    <li class='part-item-content-info'>订单管理</li>
+                                    <li class='part-item-content-info'>权限设置</li>
+                                    <li class='part-item-content-info'>销售管理</li>
+                                    <li class='part-item-content-info'>回款管理</li>
+                                </ul>
                             </div>
-                            <div class='part-item-content-title'>智能办公</div>
-                            <ul class='part-item-content-infos'>
-                                <li class='part-item-content-info'>文件系统</li>
-                                <li class='part-item-content-info'>财务管理</li>
-                                <li class='part-item-content-info'>市场管理</li>
-                                <li class='part-item-content-info'>绩效考核</li>
-                                <li class='part-item-content-info'>管理中心</li>
-                            </ul>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -329,48 +327,8 @@
     <div class='index-part4 index-part'>
         <div class='part-title'>合作伙伴及行业动态</div>
         <div class='part-content'>
-            <div class='part-bitmap'>
-                <div class='part-content-main'>
-                    <div class='part-detail'>
-                        <div class='detail-left'>
-                            <div class='detail-left-content-container'>
-                                <div class='left-title'>欧易生物与烈冰科技达成企业级生物云计算合作</div>
-                                <a class='left-button' href='#'>详细信息</a>
-                            </div>
-                        </div>
-                        <div class='detail-right'>
-                            <div class='detail-right-content-container'>
-                                <div class='detail-content1'>
-                                    <div class='spliter-container'>
-                                        <div class='spliter'></div>
-                                    </div>
-                                    <div class='detail-content-container'>
-                                        <div class='content-title'>10.25 </div>
-                                        <div class='content-main'>海云基因联合烈冰科技达成医疗云计算平台开发战略合作</div>
-                                    </div>
-                                </div>
-                                <div class='detail-content2'>
-                                    <div class='spliter-container'>
-                                        <div class='spliter'></div>
-                                    </div>
-                                    <div class='detail-content-container'>
-                                        <div class='content-title'>08.18  </div>
-                                        <div class='content-main'>NovelBrain®云平台亮相“高通量+大数据”高端沙龙</div>
-                                    </div>
-                                </div>
-                                <div class='detail-content3'>
-                                    <div class='spliter-container'>
-                                        <div class='spliter'></div>
-                                    </div>
-                                    <div class='detail-content-container'>
-                                        <div class='content-title'>07.15  </div>
-                                        <div class='content-main'>烈冰科技NovelBrain®云计算亮相第九届生物产业大会</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class='fn-news-container part-bitmap'>
+                
             </div>
         </div>
     </div>

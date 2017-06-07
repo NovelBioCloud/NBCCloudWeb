@@ -15,8 +15,8 @@
                     <a href='home/productList1#part1'><span class='product-item-tag'>定制流程</span></a>
                     <a href='home/productList1#part2'><span class='product-item-tag'>项目管理</span></a>
                     <a href='home/productList1#part3'><span class='product-item-tag'>任务监控</span></a>
-                    <a href='home/productList1#part5'><span class='product-item-tag'>基因组浏览</span></a>
-                    <a href='home/productList1#part4'><span class='product-item-tag'>数据库</span></a>
+                    <a href='home/productList1#part4'><span class='product-item-tag'>基因组浏览</span></a>
+                    <a href='home/productList1#part5'><span class='product-item-tag'>数据库</span></a>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div class='product-item-tags clearfix'> 
                     <a href='home/productList3#part1'><span class='product-item-tag'>样本管理</span></a>
-                    <a href='home/productList3#part1'><span class='product-item-tag'>实验管理</span></a>
+                    <a href='home/productList3#part2'><span class='product-item-tag'>实验管理</span></a>
                 </div>
             </div>
         </div>
@@ -62,9 +62,9 @@
                 </div>
                 <div class='product-item-tags clearfix'> 
                     <a href='home/productList4#part1'><span class='product-item-tag'>订单管理</span></a>
-                    <a href='home/productList4#part1'><span class='product-item-tag'>权限设置</span></a>
-                    <a href='home/productList4#part1'><span class='product-item-tag'>销售管理</span></a>
-                    <a href='home/productList4#part1'><span class='product-item-tag'>回款管理</span></a>
+                    <a href='home/productList4#part2'><span class='product-item-tag'>权限设置</span></a>
+                    <a href='home/productList4#part3'><span class='product-item-tag'>销售管理</span></a>
+                    <a href='home/productList4#part4'><span class='product-item-tag'>回款管理</span></a>
                 </div>
             </div>
             <div class='product-item-image product-item-padding-left'>

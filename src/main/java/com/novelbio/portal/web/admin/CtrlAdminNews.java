@@ -1,5 +1,7 @@
 package com.novelbio.portal.web.admin;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +23,8 @@ public class CtrlAdminNews extends AbstractController {
 	@RequestMapping("getList")
 	ResultJson getList() {
 		try {
-			return ResultJson.trueState("", mgmtNews.getList());
+			List<News> newsList = mgmtNews.getOrderList();
+			return ResultJson.trueState("", newsList);
 		} catch (Exception e) {
 			return ResultJson.falseState(e.getMessage());
 		}
@@ -31,8 +34,8 @@ public class CtrlAdminNews extends AbstractController {
 	@RequestMapping("create")
 	ResultJson create(News news) {
 		try {
-			mgmtNews.create(news.getTitle(), news.getDescription(), news.getImage(), news.getLink(),
-					news.getPublishDate());
+			mgmtNews.create(news.getTitle(), news.getImage(), news.getLink(), news.getPublishDate(),
+					news.getDescription());
 		} catch (Exception e) {
 			return ResultJson.falseState(e.getMessage());
 		}
@@ -43,8 +46,8 @@ public class CtrlAdminNews extends AbstractController {
 	@RequestMapping("update")
 	ResultJson update(News culture) {
 		try {
-			mgmtNews.update(culture.getId(), culture.getTitle(), culture.getDescription(), culture.getImage(),
-					culture.getLink(), culture.getPublishDate());
+			mgmtNews.update(culture.getId(), culture.getTitle(), culture.getImage(), culture.getLink(),
+					culture.getPublishDate(), culture.getDescription());
 		} catch (Exception e) {
 			return ResultJson.falseState(e.getMessage());
 		}

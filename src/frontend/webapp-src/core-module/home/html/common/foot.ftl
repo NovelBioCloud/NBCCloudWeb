@@ -34,8 +34,9 @@
             <div class='contact-position'>上海市闵行区新骏环路138号漕河泾开发区2号楼2F</div>
         </div>
         <div class='nb-foot-col-code nb-foot-info'>
-            <div class='code-image'>
-                <img src='common-resource/themes/novelbio/images/ma.jpg'/>
+            <div style='margin-top:10px;'>
+                <img style='width:110px;' src='core-module/home/image/ma1.jpg'/>
+                <img style='width:110px;margin-left:20px;' src='core-module/home/image/ma2.jpg'/>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <div class='partContent-content'>
     <h2 class='partContent-content-title'>自动报告</h2>
     <p class='partContent-content-desc'>系统自动生成结果报告，分析全程可追溯，结果报告可视化，零生物信息学基础也可快速理解，并可自动发送至用户邮箱。</p>
-    <div class='item-part'>
+    <div id='part1' class='item-part'>
         <div class='item-part-left'>
             <div class='item-part-title'>报告形式</div>
             <div class='item-part-img'>
@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <div class='item-part'>
+    <div id='part2' class='item-part'>
         <div class='item-part-left'>
             <div class='item-part-title'>一键化设置</div>
             <div class='item-part-img'>

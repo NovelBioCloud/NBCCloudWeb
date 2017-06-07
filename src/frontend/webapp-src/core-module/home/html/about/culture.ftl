@@ -14,14 +14,18 @@
     <div class='culture-description'>
         <div></div>
         <div class='culture-description-title'>办公环境</div>
-        <div style='display:flex;margin:50px 0px;'>
-            <img src='core-module/home/image/culture-01.jpg' style='margin:0;flex:1;'></img>
-            <img src='core-module/home/image/culture-02.jpg' style='margin:0 50px;flex:1;'></img>
-            <img src='core-module/home/image/culture-03.jpg' style='margin:0;flex:1;'></img>
+        <div style="display:flex;margin:50px 0px;">
+            <div style="display: flex;width:70%;">
+                <img src="core-module/home/image/culture-01.jpg" style="margin:0;flex:1;">
+            </div>
+            <div style="display:flex;flex: 1;padding: 0px 20px;flex-direction: column;">
+                <img src="core-module/home/image/culture-02.jpg" style="margin: 0 0px 20px 0px;flex:1;">
+                <img src="core-module/home/image/culture-03.jpg" style="margin:0;flex:1;">
+            </div>
         </div>
         <div class='culture-description-content'>
             明亮的办公环境，轻松的工作氛围，友爱的工作伙伴，在这里你能尽情发挥才华，实现梦想。
-        </div>    
+        </div>
     </div>
     <div class='culture-description'>
         <div>
