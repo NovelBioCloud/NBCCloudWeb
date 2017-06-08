@@ -36,10 +36,10 @@ class StudyModule {
             </div>
         </div>
     </div>`
-    firstItemTemplate: string = `<div class='study-media-item firstItem'>
-        <video class='fn-video'controls="controls" style='width: 580px;height: 440px;'>
-            您的浏览器不支持 video 标签。
-        </video>
+    firstItemTemplate: string = `<div class='study-media-item first-item'>
+        <img class='fn-video-image video-image'/>
+        <div class='fn-video-play video-play'></div>
+        <div class='fn-video-title video-title'></div>
     </div>`
     itemTemplate: string = `<div class='study-media-item'>
         <img class='fn-image'/>
@@ -65,7 +65,11 @@ class StudyModule {
     createFirstItem(data) {
         this.element.find('.fn-first-item-container').empty()
         const item = $(this.firstItemTemplate).appendTo(this.element.find('.fn-first-item-container'))
-        item.find('.fn-video').prop('src', data.link)
+        item.find('.fn-video-title').html(data.title)
+        item.find('.fn-video-play').click(() => {
+            window.open(data.link)
+        })
+        item.find('.fn-video-image').prop('src', data.link)
     }
     createItem(data) {
         const item = $(this.itemTemplate).appendTo(this.element.find('.fn-items-container'))

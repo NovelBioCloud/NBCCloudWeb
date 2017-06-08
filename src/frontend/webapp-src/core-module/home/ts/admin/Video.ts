@@ -1,6 +1,7 @@
 import * as _ from 'lodash'
 import * as moment from 'moment'
 import axios from 'axios'
+import { ImageSelector } from '../imageSelector/ImageSelector'
 declare const $: any
 export class Video {
     element: JQuery
@@ -94,6 +95,17 @@ export class Video {
         })
         dialog.dialog('body').append(dialogContent)
         $.parser.parse(dialogContent)
+        dialogContent.find('.fn-add-image').click(() => {
+            new ImageSelector().init({
+                isSingleSelect: true,
+                onSelect: (data) => {
+                    if (data) {
+                        dialogContent.find('[name="image"]')
+                            .textbox('setValue', `cloudFile/getInputStream?id=` + data.id)
+                    }
+                }
+            })
+        })
         dialog.dialog('open').dialog('center')
     }
     openRemoveDialog() {
@@ -164,7 +176,7 @@ export class Video {
                                 <tr>
                                     <td>标题:</td>
                                     <td><input class="easyui-textbox" type="text" name="title"
-                                    data-options="required:true,validType:'datebox'" value="${title}"></input></td>
+                                    data-options="required:true," value="${title}"></input></td>
                                 </tr>
                                 <tr>
                                     <td>发布日期:</td>
@@ -174,7 +186,8 @@ export class Video {
                                 <tr>
                                     <td>图片链接:</td>
                                     <td><input class="easyui-textbox" name="image" value="${image}"
-                                    data-options="required:true,validType:'datebox'" value="${title}"></input></td>
+                                    data-options="required:true" value="${image}"></input>
+                                        <button class='fn-add-image' type='button'>选择</button></td>
                                 </tr>
                                 <tr>
                                     <td>描述:</td>
@@ -225,6 +238,17 @@ export class Video {
         })
         dialog.dialog('body').append(dialogContent)
         $.parser.parse(dialogContent)
+        dialogContent.find('.fn-add-image').click(() => {
+            new ImageSelector().init({
+                isSingleSelect: true,
+                onSelect: (data) => {
+                    if (data) {
+                        dialogContent.find('[name="image"]')
+                            .textbox('setValue', `cloudFile/getInputStream?id=` + data.id)
+                    }
+                }
+            })
+        })
         dialog.dialog('open').dialog('center')
     }
     create(postData) {

@@ -2,8 +2,10 @@
     <div class='product-list'>
         <div class='product-item' id="analysis">
             <div class='product-item-image product-item-padding-right'>
-                <div class='product-item-image-png product-item-image1'>
-                    <img/>
+                <div class='product-item-image-png'>
+                    <div class='img-wrap'>
+                        <img src='core-module/home/image/product-1.png'/>
+                    </div>
                 </div>
             </div>
             <div class='product-item-text'>
@@ -32,15 +34,19 @@
                 </div>
             </div>
             <div class='product-item-image product-item-padding-left'>
-                <div class='product-item-image-png product-item-image2'>
-                    <img/>
+                <div class='product-item-image-png'>
+                    <div class='img-wrap'>
+                        <img src='core-module/home/image/product-2.png'/>
+                    </div>
                 </div>
             </div>
         </div>
         <div class='product-item' id="sample">
             <div class='product-item-image product-item-padding-right'>
-                <div class='product-item-image-png product-item-image3'>
-                    <img/>
+                <div class='product-item-image-png'>
+                    <div class='img-wrap'>
+                        <img src='core-module/home/image/product-3.png'/>
+                    </div>
                 </div>
             </div>
             <div class='product-item-text'>
@@ -68,8 +74,10 @@
                 </div>
             </div>
             <div class='product-item-image product-item-padding-left'>
-                <div class='product-item-image-png product-item-image4'>
-                    <img/>
+                <div class='product-item-image-png'>
+                    <div class='img-wrap'>
+                        <img src='core-module/home/image/product-4.png'/>
+                    </div>
                 </div>
             </div>
         </div>

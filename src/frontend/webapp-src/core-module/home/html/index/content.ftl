@@ -4,8 +4,8 @@
             <div class='part-content'>
                 <div class='part-content-main'>
                 <div class='part-items'>
-                    <a href='home/product#analysis'>
-                        <div class='part-item'>
+                    <a href='home/product#analysis' class='part-item'>
+                        <div>
                             <div class='part-item-content'>
                                 <div class='part-item-content-image'>
                                     <div class='part-item-content-image-png part-item-content-image-png1'>
@@ -22,8 +22,8 @@
                             </div>
                         </div>
                     </a>
-                    <a href='home/product#report'>
-                        <div class='part-item'>
+                    <a href='home/product#report' class='part-item'>
+                        <div>
                             <div class='part-item-content'>
                                 <div class='part-item-content-image'>
                                     <div class='part-item-content-image-png part-item-content-image-png2'>
@@ -37,8 +37,8 @@
                             </div>
                         </div>
                     </a>
-                    <a href='home/product#sample'>
-                        <div class='part-item'>
+                    <a href='home/product#sample' class='part-item'>
+                        <div>
                             <div class='part-item-content'>
                                 <div class='part-item-content-image'>
                                     <div class='part-item-content-image-png part-item-content-image-png3'>
@@ -52,8 +52,8 @@
                             </div>
                         </div>
                     </a>
-                    <a href='home/product#office'>
-                        <div class='part-item'>
+                    <a href='home/product#office' class='part-item'>
+                        <div>
                             <div class='part-item-content'>
                                 <div class='part-item-content-image'>
                                     <div class='part-item-content-image-png part-item-content-image-png4'>

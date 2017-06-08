@@ -7,8 +7,9 @@
     background-size: cover;
     background-position: center;
 }
+
 .nb-content .nb-content-row {
-    max-width: 960px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -16,7 +17,7 @@
     .news-content {
         margin: 80px 0px 150px 0px;
         .study-list {
-            margin-bottom: 50px;
+            margin-bottom: 80px;
             .study-title {
                 font-family: MicrosoftYaHei;
                 font-size: 38px;
@@ -32,21 +33,62 @@
                     width: 700px;
                     height: 448px;
                     overflow: hidden;
-                    img {
-                        width: 100%;
+                    .first-item {
+                        width: 700px;
+                        height: 448px;
+                        position: absolute;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        .video-image {
+                            top: 0px;
+                            left: 0px;
+                            width: 700px;
+                            height: 448px;
+                        }
+                        .video-play {
+                            position: absolute;
+                            top: 120px;
+                            left: 280px;
+                            width: 144px;
+                            height: 144px;
+                            border-radius: 50%;
+                            background: #f00;
+                            cursor: pointer;
+                        }
+                        .video-title {
+                            height: 88px;
+                            bottom: 0px;
+                            position: absolute;
+                            background: rgba(0, 0, 0, 0.50);
+                            font-family: MicrosoftYaHei;
+                            font-size: 24px;
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            line-height: 88px;
+                            padding: 0px 30px;
+                            overflow: hidden;
+                            width: 100%;
+                            &:hover {
+                                text-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
+                            }
+                        }
                     }
                 }
                 .study-media-list {
                     overflow: auto;
                     height: 448px;
-                    width: 450px;
+                    width: 300px;
+                    overflow: auto;
                     .study-media-items {
-                        margin: 0px 35px 0px 35px;
+                        margin: 0px auto;
                         overflow: hidden;
+                        width: 220px;
                         .study-media-item {
                             border-radius: 4px;
+                            width: 220px;
+                            margin: 0 auto;
                             img {
-                                margin-bottom: 10px;
+                                margin-bottom: 15px;
                                 width: 220px;
                                 height: 136px;
                             }
@@ -65,18 +107,24 @@
                 letter-spacing: 0;
             }
             .message-item {
-                margin-bottom: 30px;
+                margin-bottom: 40px;
                 display: flex;
                 .message-item-image {
                     flex-basis: 382px;
                     text-align: center;
                     border: 0 solid #EEEEEE;
-                    box-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
                     border-radius: 2px;
+                    display: flex;
+                    flex-direction: column;
                     img {
                         border: 0;
                         width: 380px;
                         height: 243px;
+                        flex: auto;
+                        justify-content: center;
+                        &:hover {
+                            box-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
+                        }
                     }
                 }
                 .message-item-text {
@@ -87,7 +135,11 @@
                         font-size: 38px;
                         color: #0C253D;
                         letter-spacing: 0;
-                        line-height: 1.5em;
+                        line-height: 1.2em;
+                        margin-bottom: 10px;
+                        &:hover {
+                            text-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
+                        }
                     }
                     .message-item-time {
                         font-family: MicrosoftYaHei;
