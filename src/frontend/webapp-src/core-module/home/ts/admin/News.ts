@@ -86,17 +86,7 @@ export class News {
         })
         dialog.dialog('body').append(dialogContent)
         $.parser.parse(dialogContent)
-        dialogContent.find('.fn-add-image').click(() => {
-            new ImageSelector().init({
-                isSingleSelect: true,
-                onSelect: (data) => {
-                    if (data) {
-                        dialogContent.find('[name="image"]')
-                            .textbox('setValue', `cloudFile/getInputStream?id=` + data.id)
-                    }
-                }
-            })
-        })
+        this.bindEvent(dialogContent)
         dialog.dialog('open').dialog('center')
     }
     openRemoveDialog() {
@@ -160,12 +150,12 @@ export class News {
                             <table>
                                 <tr>
                                     <td>文档链接:</td>
-                                    <td><input class="easyui-textbox fn-link" type="text" name="link"
+                                    <td><input class="easyui-validatebox fn-link" type="text" name="link"
                                     data-options="required:true,validType:'url'" value="${link}"></input></td>
                                 </tr>
                                 <tr>
                                     <td>标题:</td>
-                                    <td><input class="easyui-textbox" type="text" name="title"
+                                    <td><input class="easyui-validatebox" type="text" name="title"
                                     data-options="required:true," value="${title}"></input></td>
                                 </tr>
                                 <tr>
@@ -175,9 +165,13 @@ export class News {
                                 </tr>
                                 <tr>
                                     <td>图片链接:</td>
-                                    <td><input class="easyui-textbox" type="text" name="image"
-                                    data-options="required:true" value="${image}"></input>
-                                    <button class='fn-add-image' type='button'>选择</button>
+                                    <td>
+                                        <input class="easyui-validatebox" type="text"  name='image' value='${image}'/>
+                                        <br/>
+                                        <img class='fn-image-img' style='max-width:300px;max-height:200px;' src='${image}'></img>
+                                        <br/>
+                                        <button class='fn-add-image' type='button'>选择</button>
+                                        <button class='fn-refresh-image' type='button'>刷新</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -229,19 +223,35 @@ export class News {
         })
         dialog.dialog('body').append(dialogContent)
         $.parser.parse(dialogContent)
+        this.bindEvent(dialogContent)
+        dialog.dialog('open').dialog('center')
+    }
+    private bindEvent(dialogContent) {
+        let selectImage = (data) => {
+            if (data) {
+                let value = `cloudFile/getInputStream?id=` + data.id
+                dialogContent.find('[name="image"]').val(value)
+                dialogContent.find('.fn-image-img').prop('src', value)
+            }
+        }
+        dialogContent.find('.fn-image-img').click(() => {
+            new ImageSelector().init({
+                isSingleSelect: true,
+                onSelect: selectImage
+            })
+        })
         dialogContent.find('.fn-add-image').click(() => {
             new ImageSelector().init({
                 isSingleSelect: true,
-                onSelect: (data) => {
-                    if (data) {
-                        dialogContent.find('[name="image"]')
-                            .textbox('setValue', `cloudFile/getInputStream?id=` + data.id)
-                    }
-                }
+                onSelect: selectImage
             })
         })
-        dialog.dialog('open').dialog('center')
+        dialogContent.find('.fn-refresh-image').click(() => {
+            let value = dialogContent.find('[name="image"]').val()
+            dialogContent.find('.fn-image-img').prop('src', value)
+        })
     }
+
     create(postData) {
         return new Promise((resolve, reject) => {
             $.ajax({

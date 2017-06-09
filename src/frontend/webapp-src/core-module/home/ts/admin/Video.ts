@@ -2,6 +2,7 @@ import * as _ from 'lodash'
 import * as moment from 'moment'
 import axios from 'axios'
 import { ImageSelector } from '../imageSelector/ImageSelector'
+import { VideoSelector } from '../videoSelector/VideoSelector'
 declare const $: any
 export class Video {
     element: JQuery
@@ -95,17 +96,7 @@ export class Video {
         })
         dialog.dialog('body').append(dialogContent)
         $.parser.parse(dialogContent)
-        dialogContent.find('.fn-add-image').click(() => {
-            new ImageSelector().init({
-                isSingleSelect: true,
-                onSelect: (data) => {
-                    if (data) {
-                        dialogContent.find('[name="image"]')
-                            .textbox('setValue', `cloudFile/getInputStream?id=` + data.id)
-                    }
-                }
-            })
-        })
+        this.bindEvent(dialogContent)
         dialog.dialog('open').dialog('center')
     }
     openRemoveDialog() {
@@ -169,13 +160,15 @@ export class Video {
                             <input type='hidden' name='id' value ='${id}'/>
                             <table>
                                 <tr>
-                                    <td>文档链接:</td>
-                                    <td><input class="easyui-textbox fn-link" type="text" name="link"
-                                    data-options="required:true" value="${link}"></input></td>
+                                    <td>视频链接:</td>
+                                    <td><input class="easyui-validatebox fn-link" type="text" name="link"
+                                        data-options="required:true" value="${link}"></input>
+                                        <button class='fn-add-video' type='button'>选择</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>标题:</td>
-                                    <td><input class="easyui-textbox" type="text" name="title"
+                                    <td><input class="easyui-validatebox" type="text" name="title"
                                     data-options="required:true," value="${title}"></input></td>
                                 </tr>
                                 <tr>
@@ -185,9 +178,14 @@ export class Video {
                                 </tr>
                                 <tr>
                                     <td>图片链接:</td>
-                                    <td><input class="easyui-textbox" name="image" value="${image}"
-                                    data-options="required:true" value="${image}"></input>
-                                        <button class='fn-add-image' type='button'>选择</button></td>
+                                    <td>
+                                        <input class="easyui-validatebox" type="text"  name='image' value='${image}'/>
+                                        <br/>
+                                        <img class='fn-image-img' style='max-width:300px;max-height:200px;' src='${image}'></img>
+                                        <br/>
+                                        <button class='fn-add-image' type='button'>选择</button>
+                                        <button class='fn-refresh-image' type='button'>刷新</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>描述:</td>
@@ -238,18 +236,45 @@ export class Video {
         })
         dialog.dialog('body').append(dialogContent)
         $.parser.parse(dialogContent)
+        this.bindEvent(dialogContent)
+        dialog.dialog('open').dialog('center')
+    }
+    private bindEvent(dialogContent) {
+        let selectImage = (data) => {
+            if (data) {
+                let value = `cloudFile/getInputStream?id=` + data.id
+                dialogContent.find('[name="image"]').val(value)
+                dialogContent.find('.fn-image-img').prop('src', value)
+            }
+        }
+        let selectVideo = (data) => {
+            if (data) {
+                let value = `cloudFile/getInputStream?id=` + data.id
+                dialogContent.find('[name="link"]').val(value)
+            }
+        }
+        dialogContent.find('.fn-image-img').click(() => {
+            new ImageSelector().init({
+                isSingleSelect: true,
+                onSelect: selectImage
+            })
+        })
         dialogContent.find('.fn-add-image').click(() => {
             new ImageSelector().init({
                 isSingleSelect: true,
-                onSelect: (data) => {
-                    if (data) {
-                        dialogContent.find('[name="image"]')
-                            .textbox('setValue', `cloudFile/getInputStream?id=` + data.id)
-                    }
-                }
+                onSelect: selectImage
             })
         })
-        dialog.dialog('open').dialog('center')
+        dialogContent.find('.fn-refresh-image').click(() => {
+            let value = dialogContent.find('[name="image"]').val()
+            dialogContent.find('.fn-image-img').prop('src', value)
+        })
+        dialogContent.find('.fn-add-video').click(() => {
+            new VideoSelector().init({
+                isSingleSelect: true,
+                onSelect: selectVideo
+            })
+        })
     }
     create(postData) {
         return new Promise((resolve, reject) => {

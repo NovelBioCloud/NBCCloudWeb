@@ -48,7 +48,7 @@ export class CloudFile {
     }
     download() {
         const data = this.element.datagrid('getSelected')
-        console.log(data)
+        window.open(`cloudFile/download?id=${data.id}`)
     }
     openCreateDialog() {
         const dialogContentTemplate = this.getDialogContentTemplate({})

@@ -69,7 +69,7 @@ class StudyModule {
         item.find('.fn-video-play').click(() => {
             window.open(data.link)
         })
-        item.find('.fn-video-image').prop('src', data.link)
+        item.find('.fn-video-image').prop('src', data.image)
     }
     createItem(data) {
         const item = $(this.itemTemplate).appendTo(this.element.find('.fn-items-container'))

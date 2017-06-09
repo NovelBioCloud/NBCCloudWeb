@@ -1,30 +1,35 @@
 import axios from 'axios'
 
-class ImageList {
+class VideoList {
     template: string = `<div>
         <div>
-            <ul class='fn-images-container'></ul>
+            <video autoplay="autoplay" style='height:200px;margin:30px auto;display:block;' class='fn-player' controls="controls"></video>
+        </div>
+        <div>
+            <ul class='fn-videos-container'></ul>
         </div>
     </div>`
-    imageTemplate: string = `<li style='margin:15px;display:inline-block;'></li>`
+    videoTemplate: string = `<li style='margin:15px;display:inline-block;'></li>`
     element: JQuery
     container: JQuery
-    imagesContainer: JQuery
-    images: Image[] = []
+    videosContainer: JQuery
+    videos: Video[] = []
     isSingleSelect: boolean = false
+    player
     init({ container, isSingleSelect }) {
         this.container = container
         this.element = $(this.template).appendTo(this.container)
-        this.imagesContainer = this.element.find('.fn-images-container')
+        this.videosContainer = this.element.find('.fn-videos-container')
+        this.player = this.element.find('.fn-player')
         this.isSingleSelect = isSingleSelect
     }
     getSelectData() {
-        return this.images.filter(it => it.isSelect()).map(it => it.getData())
+        return this.videos.filter(it => it.isSelect()).map(it => it.getData())
     }
-    addImage(data) {
-        const imageContainer = $(this.imageTemplate).appendTo(this.imagesContainer)
-        const image = new Image({
-            container: imageContainer,
+    addVideo(data) {
+        const videoContainer = $(this.videoTemplate).appendTo(this.videosContainer)
+        const video = new Video({
+            container: videoContainer,
             data: data,
             onClick: (data) => {
                 if (this.isSingleSelect) {
@@ -32,19 +37,25 @@ class ImageList {
                 } else {
                     this.setSelect(data)
                 }
+            },
+            onPlay: (data) => {
+                this.player.prop('src', '')
+                if (data) {
+                    this.player.prop('src', `cloudFile/getInputStream?id=${data.id}`)
+                }
             }
         })
-        this.images.push(image)
+        this.videos.push(video)
     }
     setSelect(data) {
-        this.images.forEach(it => {
+        this.videos.forEach(it => {
             if (it.getData() === data) {
                 it.setSelect(true)
             }
         })
     }
     setSingleSelect(data) {
-        this.images.forEach(it => {
+        this.videos.forEach(it => {
             if (it.getData() === data) {
                 it.setSelect(!it.isSelect())
             } else {
@@ -54,70 +65,66 @@ class ImageList {
     }
 }
 
-class Image {
-    template: string = `<div class='class-image'>
+class Video {
+    template: string = `<div class='class-video'>
         <style>
-            .class-image{
+            .class-video{
                 width:200px;
-                height:200px;
             }
-            .class-image .img{
-                width:200px;
-                height:130px;
-            }
-            .class-image .title{
+            .class-video .title{
                 padding:5px;
+                display:inline-block;
+                width:180px;
                 overflow:hidden;
+                margin:5px auto;
             }
-            .active-image{
+            .active-video{
                 outline:1px solid #4cae4c;
             }
         </style>
-        <div class='fn-img img'></div>
         <div class='fn-title title'></div>
     </div>`
     container: JQuery
     element: JQuery
-    img: JQuery
+    title: JQuery
     data
     onClick
-    constructor({ container, data, onClick }) {
+    onPlay
+    constructor({ container, data, onClick, onPlay }) {
         this.container = container
         this.data = data
         this.onClick = onClick
+        this.onPlay = onPlay
         this.render()
     }
     private render() {
         this.element = $(this.template).appendTo(this.container)
-        this.img = this.element.find('.fn-img').css({
-            'background-image': `url(cloudFile/getInputStream?id=${this.data.id})`,
-            'background-size': `contain`,
-            'background-repeat': `no-repeat`,
-            'background-position': 'center'
-        })
-        this.element.find('.fn-title').html(this.data.name)
-        this.element.click(() => {
+        this.title = this.element.find('.fn-title').html(this.data.name)
+        this.title.click(() => {
             this.onClick(this.data)
+        })
+        this.title.dblclick(() => {
+            this.onPlay(this.data)
         })
     }
     getData() {
         return this.data
     }
     isSelect() {
-        return this.element.hasClass('active-image')
+        return this.title.hasClass('active-video')
     }
     setSelect(flag) {
         if (flag) {
-            this.element.addClass('active-image')
+            this.title.addClass('active-video')
         } else {
-            this.element.removeClass('active-image')
+            this.title.removeClass('active-video')
         }
     }
 }
-export class ImageSelector {
+export class VideoSelector {
 
     init({ isSingleSelect, onSelect }) {
-        const imageList = new ImageList()
+        const videoList = new VideoList()
         const dialog = $('<div/>').dialog({
             title: '图片选择',
             width: 800,
@@ -128,9 +135,9 @@ export class ImageSelector {
                 iconCls: 'icon-save',
                 text: '保存',
                 handler: () => {
-                    const image = imageList.getSelectData().find(it => true) || null
-                    if (image) {
-                        onSelect(image)
+                    const video = videoList.getSelectData().find(it => true) || null
+                    if (video) {
+                        onSelect(video)
                         dialog.dialog('close').dialog('destroy').remove()
                     }
                 }
@@ -142,19 +149,19 @@ export class ImageSelector {
                 }
             }]
         })
-        imageList.init({
+        videoList.init({
             container: dialog.dialog('body'),
             isSingleSelect: isSingleSelect
         })
         dialog.dialog('open').dialog('center')
         this.loadData().then(data => {
             if (data.state) {
-                const imageDatas: any[] = data.result
-                imageDatas.forEach(it => imageList.addImage(it))
+                const videoDatas: any[] = data.result
+                videoDatas.forEach(it => videoList.addVideo(it))
             }
         })
     }
     loadData() {
-        return axios.post('cloudFile/getImageList').then(resp => resp.data)
+        return axios.post('cloudFile/getVideoList').then(resp => resp.data)
     }
 }

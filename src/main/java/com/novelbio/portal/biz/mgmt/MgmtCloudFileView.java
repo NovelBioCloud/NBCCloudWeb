@@ -9,11 +9,13 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.novelbio.portal.base.MIMETypes;
 import com.novelbio.portal.biz.entity.CloudFileView;
 import com.novelbio.portal.biz.model.CloudFile;
 
 @Service
 public class MgmtCloudFileView {
+	FileNameMap fileNameMap = URLConnection.getFileNameMap();
 	@Autowired
 	ConfigService configService;
 	@Autowired
@@ -32,10 +34,16 @@ public class MgmtCloudFileView {
 		return view;
 	}
 
+	public List<CloudFileView> getVideoList() {
+		return mgmtCloudFile.list().stream().filter(it -> {
+			String type = MIMETypes.getContentTypeFor(it.getName());
+			return StringUtils.startsWith(type, "video");
+		}).map(it -> this.get(it)).collect(Collectors.toList());
+	}
+
 	public List<CloudFileView> getImageList() {
 		return mgmtCloudFile.list().stream().filter(it -> {
-			FileNameMap fileNameMap = URLConnection.getFileNameMap();
-			String type = fileNameMap.getContentTypeFor(it.getName());
+			String type = MIMETypes.getContentTypeFor(it.getName());
 			return StringUtils.startsWith(type, "image");
 		}).map(it -> this.get(it)).collect(Collectors.toList());
 	}
