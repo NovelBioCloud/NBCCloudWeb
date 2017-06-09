@@ -28,7 +28,7 @@ public class MgmtRecruitment {
 		repoRecruitment.delete(id);
 	}
 
-	public List<Recruitment> list() {
+	public List<Recruitment> getList() {
 		return Lists.newArrayList(repoRecruitment.findAll());
 	}
 

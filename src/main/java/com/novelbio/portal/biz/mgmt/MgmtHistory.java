@@ -24,7 +24,7 @@ public class MgmtHistory {
 		repoHistory.delete(id);
 	}
 
-	public List<History> list() {
+	public List<History> getList() {
 		return Lists.newArrayList(repoHistory.findAll().iterator());
 	}
 

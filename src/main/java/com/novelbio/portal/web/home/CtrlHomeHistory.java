@@ -30,7 +30,7 @@ public class CtrlHomeHistory extends AbstractController {
 	@RequestMapping("getList")
 	ResultJson getListHistory() {
 		try {
-			List<History> historyList = mgmtHistory.list();
+			List<History> historyList = mgmtHistory.getList();
 			Collections.sort(historyList, (o2, o1) -> {
 				if (o1.getTime() == null && o2.getTime() == null) {
 					return 0;

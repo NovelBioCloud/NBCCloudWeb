@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 public class ConfigService {
 
 	/**
-	 * 文档的根目录
+	 * 文档的根目录，存储视频，音频，图片，文本等数据的文件路径
 	 */
 	@Value("${rootPath}")
 	private String rootpath;

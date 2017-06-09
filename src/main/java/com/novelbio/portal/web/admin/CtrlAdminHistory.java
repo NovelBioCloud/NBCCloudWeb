@@ -49,7 +49,7 @@ public class CtrlAdminHistory extends AbstractController {
 	@RequestMapping("getList")
 	ResultJson getListHistory() {
 		try {
-			return ResultJson.trueState("", mgmtHistory.list());
+			return ResultJson.trueState("", mgmtHistory.getList());
 		} catch (Exception e) {
 			return ResultJson.falseState(e.getMessage());
 		}

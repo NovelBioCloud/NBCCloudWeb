@@ -9,7 +9,12 @@ import com.novelbio.base.fileOperate.FileOperate;
 import com.novelbio.portal.biz.mgmt.ConfigService;
 import com.novelbio.portal.biz.model.CloudFile;
 
-@Service
+/**
+ * 文件操作的实体对象
+ * 
+ * @author renyaoxiang
+ *
+ */
 public class CloudFileEntity extends CloudFile {
 	private ConfigService configService;
 
@@ -33,6 +38,11 @@ public class CloudFileEntity extends CloudFile {
 		this.configService = configService;
 	}
 
+	/**
+	 * 获取实际的存储路径
+	 * 
+	 * @return
+	 */
 	public Path getStorePath() {
 		Path path = null;
 		if (StringUtils.isBlank(this.getPath())) {

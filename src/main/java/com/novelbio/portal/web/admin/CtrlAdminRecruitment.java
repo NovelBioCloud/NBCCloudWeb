@@ -58,7 +58,7 @@ public class CtrlAdminRecruitment extends AbstractController {
 	@RequestMapping("getList")
 	ResultJson getListRecruitment() {
 		try {
-			return ResultJson.trueState("", mgmtRecruitment.list());
+			return ResultJson.trueState("", mgmtRecruitment.getList());
 		} catch (Exception e) {
 			return ResultJson.falseState(e.getMessage());
 		}

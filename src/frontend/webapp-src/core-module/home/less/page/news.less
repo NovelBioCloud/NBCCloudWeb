@@ -55,7 +55,6 @@
                             background: url('../image/video-play.png') no-repeat;
                             background-size: cover;
                             cursor: pointer;
-
                         }
                         .video-title {
                             height: 88px;
@@ -117,13 +116,14 @@
                     border: 0 solid #EEEEEE;
                     border-radius: 2px;
                     display: flex;
+                    align-items: center;
+                    justify-content: center;
                     flex-direction: column;
                     img {
                         border: 0;
                         width: 380px;
-                        height: 243px;
-                        flex: auto;
-                        justify-content: center;
+                        max-height: 243px;
+                        flex: none;
                         &:hover {
                             box-shadow: 0 10px 30px 5px rgba(13, 36, 62, 0.05);
                         }
