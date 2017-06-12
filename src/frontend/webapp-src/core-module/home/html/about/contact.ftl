@@ -39,7 +39,7 @@
     <div class='nb-page-about-contact-map'>
         <div class='nb-page-about-contact-map-title'>地址：上海市闵行区新骏环路138号漕河泾开发区2号楼2F</div>
         <div class='nb-page-about-contact-map-container' style='display:flex;'>
-            <img src='core-module/home/image/co-map.png' style='flex:1;margin-top:30px;width:100%;'></img>
+            <img src='${contextPath}/core-module/home/image/co-map.png' style='flex:1;margin-top:30px;width:100%;'></img>
         </div>
     </div>
 </div>

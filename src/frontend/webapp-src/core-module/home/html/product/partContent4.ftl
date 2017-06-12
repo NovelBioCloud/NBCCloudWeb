@@ -5,7 +5,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>订单管理</div>
             <div class='item-part-img'>
-                <img src='core-module/home/image/image4-1.png'></img>
+                <img src='${contextPath}/core-module/home/image/image4-1.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -18,7 +18,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>权限设置</div>
             <div class='item-part-img'>
-                <img src='core-module/home/image/image4-2.png'></img>
+                <img src='${contextPath}/core-module/home/image/image4-2.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -31,7 +31,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>销售管理</div>
             <div class='item-part-img'>
-                <img src='core-module/home/image/image4-3.png'></img>
+                <img src='${contextPath}/core-module/home/image/image4-3.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -44,7 +44,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>回款管理</div>
             <div class='item-part-img'>
-                <img src='core-module/home/image/image4-4.png'></img>
+                <img src='${contextPath}/core-module/home/image/image4-4.png'></img>
             </div>
         </div>
         <div class='item-part-right'>

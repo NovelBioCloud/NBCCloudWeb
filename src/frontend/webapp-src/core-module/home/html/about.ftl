@@ -5,8 +5,8 @@
 <head>
 	<@page.head>
 	<title>关于我们</title>
-  	<link rel="stylesheet" type="text/css" href="core-module/home/css/about.css" />
-	<script type="text/javascript" src="core-module/home/js/about.js" ></script>
+  	<link rel="stylesheet" type="text/css" href="${contextPath}/core-module/home/css/about.css" />
+	<script type="text/javascript" src="${contextPath}/core-module/home/js/about.js" ></script>
 	</@page.head>
 </head>
 <body>

@@ -18,10 +18,15 @@ public class CtrlHome extends AbstractController {
 	MgmtHistory mgmtHistory;
 	@Autowired
 	MgmtRecruitment mgmtRecruitment;
-
+	
+	@RequestMapping(value = { "test" })
+	public String test() {
+		return "core-module/home/html/test";
+	}
+	
 	@RequestMapping(value = { "" })
 	public String defaultPage() {
-		return "redirect:home/index";
+		return "redirect:/home/index";
 	}
 
 	@RequestMapping(value = { "index" })

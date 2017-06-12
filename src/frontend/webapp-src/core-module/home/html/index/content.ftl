@@ -4,7 +4,7 @@
             <div class='part-content'>
                 <div class='part-content-main'>
                 <div class='part-items'>
-                    <a href='home/product#analysis' class='part-item'>
+                    <a href='${contextPath}/home/product#analysis' class='part-item'>
                         <div>
                             <div class='part-item-content'>
                                 <div class='part-item-content-image'>
@@ -22,7 +22,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href='home/product#report' class='part-item'>
+                    <a href='${contextPath}/home/product#report' class='part-item'>
                         <div>
                             <div class='part-item-content'>
                                 <div class='part-item-content-image'>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href='home/product#sample' class='part-item'>
+                    <a href='${contextPath}/home/product#sample' class='part-item'>
                         <div>
                             <div class='part-item-content'>
                                 <div class='part-item-content-image'>
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href='home/product#office' class='part-item'>
+                    <a href='${contextPath}/home/product#office' class='part-item'>
                         <div>
                             <div class='part-item-content'>
                                 <div class='part-item-content-image'>

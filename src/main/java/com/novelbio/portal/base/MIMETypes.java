@@ -14,7 +14,7 @@ public class MIMETypes {
 
 	public static String getContentTypeFor(String fileName) {
 		Validate.notEmpty(fileName);
-		String[] fileNameParts = StringUtils.split(fileName, ".");
+		String[] fileNameParts = StringUtils.tokenizeToStringArray(fileName, ".");
 		String part = ".";
 		if (fileNameParts.length > 1) {
 			part += fileNameParts[fileNameParts.length - 1];

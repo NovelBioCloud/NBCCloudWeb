@@ -4,8 +4,8 @@
 <head>
 	<@page.head>
 	<title>行业动态</title>
-  	<link rel="stylesheet" type="text/css" href="core-module/home/css/newsInfo.css" />
-	<script type="text/javascript" src="core-module/home/js/newsInfo.js" ></script>
+  	<link rel="stylesheet" type="text/css" href="${contextPath}/core-module/home/css/newsInfo.css" />
+	<script type="text/javascript" src="${contextPath}/core-module/home/js/newsInfo.js" ></script>
 	</@page.head>
 	<script></script>
 </head>
