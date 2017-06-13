@@ -34,9 +34,11 @@
             <div class='contact-position'>上海市闵行区新骏环路138号漕河泾开发区2号楼2F</div>
         </div>
         <div class='nb-foot-col-code nb-foot-info'>
-            <div style='margin-top:10px;'>
-                <img style='width:110px;' src='${contextPath}/core-module/home/image/ma1.jpg'/>
-                <img style='width:110px;margin-left:20px;' src='${contextPath}/core-module/home/image/ma2.jpg'/>
+            <div style='margin-top:10px;text-align:right;'>
+            <!--
+                <img style='width:120px;' src='${contextPath}/core-module/home/image/ma1.jpg'/>
+            -->
+                <img style='width:120px;margin-left:20px;' src='${contextPath}/core-module/home/image/ma2.jpg'/>
             </div>
         </div>
     </div>

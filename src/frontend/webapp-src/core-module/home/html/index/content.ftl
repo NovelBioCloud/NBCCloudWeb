@@ -311,7 +311,7 @@
                     <div class='part-content-content'>
                         <div class='part-content-info'>
                             <div class='content-title'>一体机</div>
-                            <div class='content-description content-description-yellow'>课题组/小型团队</div>
+                            <div class='content-description content-description-yellow'>课题组／小型团队</div>
                             <ul class='content-detail'>
                                 <li>部署在用户的个人电脑+1台服务器</li>
                                 <li>拆箱即用，轻量方便</li>
