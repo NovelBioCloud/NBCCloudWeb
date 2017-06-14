@@ -42,5 +42,8 @@ module.exports = {
 	}, {
 		source: 'webapp-src/base-lib/lib/jquery-easyui/themes/material/**/*',
 		target: 'webapp/base-lib/lib/jquery-easyui/themes/material/',
+	}, {
+		source: 'webapp-src/base-lib/lib/animate.css/*',
+		target: 'webapp/base-lib/lib/animate.css/',
 	}],
 }

@@ -1,7 +1,7 @@
 import * as polyfill from '../common/polyfill'
 
 import { BackgroundSlider } from '../index/BackgroundSlider'
-import * as $ from 'jquery'
+declare const $: JQueryStatic
 import * as _ from 'lodash'
 import axios from 'axios'
 import * as moment from 'moment'
@@ -122,13 +122,24 @@ class Slider {
         this.activeContainer.css({
             'z-index': 1,
             'position': 'absolute',
-            'transition': 'all 0.5s ease',
-            'top': 430,
+            // 'transition': 'all 0.6s ease-in-out',
+            'top': 0,
             width: '100%'
-        })
+        }).addClass('hidden')
         const height = this.container.height()
-        this.container.hover(() => this.activeContainer.css('top', 0),
-            () => this.activeContainer.css('top', 430))
+
+        this.container.hover(() => {
+            this.activeContainer.removeClass('hidden animated flipInY')
+                .addClass('animated flipInY').one('animationend', () => {
+                    this.activeContainer.removeClass('animated flipInY')
+                })
+        }, () => {
+            this.activeContainer.removeClass('hidden animated flipOutY')
+                .addClass('animated flipOutY').one('animationend', () => {
+                    this.activeContainer.removeClass('animated flipOutY')
+                    this.activeContainer.addClass('hidden')
+                })
+        })
     }
 
 }

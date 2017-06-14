@@ -31,8 +31,8 @@
                                 </div>
                                 <div class='part-item-content-title'>自动报告</div>
                                 <ul class='part-item-content-infos'>
-                                    <li class='part-item-content-info'>报告形式</li>
-                                    <li class='part-item-content-info'>一键化设置</li>
+                                    <li class='part-item-content-info' style='margin-top: 22px;'>报告形式</li>
+                                    <li class='part-item-content-info' style='margin-top: 22px;'>一键化设置</li>
                                 </ul>
                             </div>
                         </div>
@@ -46,8 +46,8 @@
                                 </div>
                                 <div class='part-item-content-title'>实验室管理</div>
                                 <ul class='part-item-content-infos'>
-                                    <li class='part-item-content-info'>样本管理</li>
-                                    <li class='part-item-content-info'>实验管理</li>
+                                    <li class='part-item-content-info' style='margin-top: 22px;'>样本管理</li>
+                                    <li class='part-item-content-info' style='margin-top: 22px;'>实验管理</li>
                                 </ul>
                             </div>
                         </div>
@@ -180,8 +180,8 @@
                                     <div class='part-item-content-title'>安全</div>
                                     <ul class='part-item-content-infos'>
                                         <li class='part-item-content-info'>多级权限控制</li>
-                                        <li class='part-item-content-info'>aes256非对称性加密</li>
-                                        <li class='part-item-content-info'>数据储存多份拷贝</li>
+                                        <li class='part-item-content-info'>非对称性加密</li>
+                                        <li class='part-item-content-info'>数据多份拷贝</li>
                                     </ul>
                                 </div>
                             </div>
@@ -210,8 +210,8 @@
                                     <ul class='part-item-content-infos'>
                                         <li class='part-item-content-info'>高可用集群</li>
                                         <li class='part-item-content-info'>无单点故障</li>
-                                        <li class='part-item-content-info'>数据计算存储可插拔</li>
-                                        <li class='part-item-content-info'>开放式AP</li>
+                                        <li class='part-item-content-info'>计算存储可插拔</li>
+                                        <li class='part-item-content-info'>开放式API</li>
                                     </ul>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
                                     <div class='part-item-content-title'>虚拟化</div>
                                     <ul class='part-item-content-infos'>
                                         <li class='part-item-content-info'>docker镜像</li>
-                                        <li class='part-item-content-info'>容器级虚拟化技术</li>
+                                        <li class='part-item-content-info'>容器级虚拟化</li>
                                         <li class='part-item-content-info'>结果可重现</li>
                                         <li class='part-item-content-info'>计算环境隔离</li>
                                     </ul>
