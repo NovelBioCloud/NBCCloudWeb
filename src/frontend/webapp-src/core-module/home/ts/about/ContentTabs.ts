@@ -16,7 +16,8 @@ export class ContentTabs {
     private contents: JQuery
     private sliderContainer: JQuery
     private slider: Slider
-    public static partNames = ['introduction', 'team', 'culture', 'history', 'join', 'contact']
+    // public static partNames = ['introduction', 'team', 'culture', 'history', 'join', 'contact']
+    public static partNames = ['introduction', 'culture', 'history', 'join', 'contact']
     constructor(partName: string = 'introduction') {
         const element = $('.fn-container-tabs')
         this.titles = $('.fn-about-part-title')

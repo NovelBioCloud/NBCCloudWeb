@@ -16,7 +16,9 @@
 			<div class='nb-page-about-title'>
 				<ul class='nb-page-about-ul'>
 					<li class='fn-about-part-title nb-page-about-li active'>公司简介</li>
+					<!--
 					<li class='fn-about-part-title nb-page-about-li'>管理团队</li>
+					-->
 					<li class='fn-about-part-title nb-page-about-li'>烈冰文化</li>
 					<li class='fn-about-part-title nb-page-about-li'>发展经历</li>
 					<li class='fn-about-part-title nb-page-about-li'>加入我们</li>
@@ -29,9 +31,11 @@
 				<div class='fn-about-part-content nb-page-about-content-row active'>
 					<#include "about/introduction.ftl">
 				</div>
+				<!--
 				<div class='fn-about-part-content nb-page-about-content-row'>
 					<#include "about/manager.ftl">
 				</div>
+				-->
 				<div class='fn-about-part-content nb-page-about-content-row'>
 					<#include "about/culture.ftl">
 				</div>

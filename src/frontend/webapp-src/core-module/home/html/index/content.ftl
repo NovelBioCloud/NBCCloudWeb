@@ -104,7 +104,7 @@
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        NovelBrain®云平台采用了互联网最新的大数据技术，集成了Hadoop生态系统中的hdfs、zookeeper、YARN、MapReduce等计算存储框架，并在其上进行二次开发，实现了针对生物大数据的分布式计算和任务调度。同时对部分计算采用CUDA硬件加速，大幅加快计算速度。
+                                        NovelBrain®云平台采用了互联网最新的大数据技术，集成了Hadoop生态系统中的zookeeper、hdfs、MapReduce、YARN等计算存储框架，并在其上进行二次开发，实现了针对生物大数据的分布式计算和任务调度。同时对部分计算采用CUDA硬件加速，大幅加快计算速度。
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        平台做到全程“0代码”使用实现，简单拖拽即可实现复杂的分析流程，并可自由上线自己的分析工具。全新的交互和UI设计，加上可配置结果报告，带给您最舒适的用户体验。此外，NovelBrain®云平台还整合了基因组浏览器，实现测序数据的可视化展示，方便进行深入分析。
+                                        平台做到全程“0代码”使用实现，简单拖拽即可实现复杂的分析流程，并可自由上线自己的分析工具。全新的交互和UI设计，加上可配置结果报告，带给您最舒适的用户体验。此外，云平台还整合了基因组浏览器，实现测序数据的可视化展示，方便进行深入分析。
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +192,7 @@
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        NovelBrain®云平台遵守全面完善的安全规范，包括网络传输的SSL加密、对客户的敏感信息采用AES256非对称加密，全面保护客户隐私。同时通过权限控制和多份拷贝来保证数据的隔离性和可靠性，为整个平台提供保障。对于存储在云端的数据NovelBrain提供三分拷贝，保证数据不会丢失。
+                                        NovelBrain®云平台遵守全面完善的安全规范，包括网络传输的SSL加密、对客户的敏感信息采用AES256非对称加密，全面保护客户隐私。同时通过权限控制和多份拷贝来保证数据的隔离性和可靠性，为整个平台提供保障。对于存储在云端的数据平台提供三分拷贝，保证数据不会丢失。
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +222,7 @@
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        在公有云系统上，NovelBrain®云平台可以同时调集数千台服务器进行计算。而在私有云系统上，只需把新服务器简单配置即可加入集群，从而提高集群的计算和存储能力。NovelBrain®更提供开放式API端口用于自定义算法的封装，即使是用户自行上线的工具，也可轻松实现并行计算。
+                                        在公有云系统上，云平台可以同时调集数千台服务器进行计算。而在私有云系统上，只需把新服务器简单配置即可加入集群，从而提高集群的计算和存储能力。平台更提供开放式API端口用于自定义算法的封装，即使是用户自行上线的工具，也可轻松实现并行计算。
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@
                                 <li>部署在用户的本地服务器集群</li>
                                 <li>全面开放式API端口</li>
                                 <li>企业级标准的质控和归档</li>
-                                <li>分析工具、实验监控、智能办公、信息化管理全囊括</li>
+                                <li>分析工具、实验监控、智能办公、信息化管理全覆盖</li>
                             </ul>
                         </div>  
                     </div>

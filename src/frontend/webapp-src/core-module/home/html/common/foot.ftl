@@ -21,7 +21,7 @@
             <div class='nb-foot-info-title'>关于我们</div>
             <ul>
                 <li><a href='${contextPath}/home/about#introduction'>公司简介</a></li>
-                <li><a href='${contextPath}/home/about#team'>管理团队</a></li>
+             <!--   <li><a href='${contextPath}/home/about#team'>管理团队</a></li>  -->
                 <li><a href='${contextPath}/home/about#culture'>烈冰文化</a></li>
                 <li><a href='${contextPath}/home/about#history'>发展经历</a></li>
                 <li><a href='${contextPath}/home/about#join'>加入我们</a></li>

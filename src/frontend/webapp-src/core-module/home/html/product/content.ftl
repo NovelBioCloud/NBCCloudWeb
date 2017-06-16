@@ -26,7 +26,7 @@
             <div class='product-item-text'>
                 <div class='product-item-title'>自动报告</div>
                 <div class='product-item-info'>
-                    系统自动生成结果报告，分析全程可追溯，结果报告可视化，零生物信息学基础也可快速理解，并可自动发送至用户邮箱。
+                    系统自动生成结果报告，分析全程可追溯，结果报告可视化，零生物信息学基础也可快速理解，并可自动发送至用户邮箱，结果图片可直接用于SCI文章发表。
                 </div>
                 <div class='product-item-tags clearfix'> 
                     <a href='${contextPath}/home/productList2#part1' target='_blank'><span class='product-item-tag'>报告形式</span></a>
@@ -64,7 +64,7 @@
             <div class='product-item-text'>
                 <div class='product-item-title'>智能办公</div>
                 <div class='product-item-info'>
-                    智能办公结合订单管理、权限设置、销售管理、财务系统与到款进度管理，改变传统工作模式，轻松实现企业管理智能化。
+                    订单管理能对订单情况进行记录、跟踪和控制，大幅提高团队工作效率，轻松实现异地办公和企业管理智能化。
                 </div>
                 <div class='product-item-tags clearfix'> 
                     <a href='${contextPath}/home/productList4#part1' target='_blank'><span class='product-item-tag'>订单管理</span></a>
