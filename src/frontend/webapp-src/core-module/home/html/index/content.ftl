@@ -1,3 +1,10 @@
+<div class='hidden'>
+    // 提前加载需要的图片
+    <img src='${contextPath}/corem-module/home/image/part1-image1-active.png'></img>
+    <img src='${contextPath}/corem-module/home/image/part1-image2-active.png'></img>
+    <img src='${contextPath}/corem-module/home/image/part1-image3-active.png'></img>
+    <img src='${contextPath}/corem-module/home/image/part1-image4-active.png'></img>
+</div>
 <div class='index-content'>
     <div class='index-part1 index-part'>
         <div class='part-title'>我们能提供的服务</div>
@@ -31,8 +38,8 @@
                                 </div>
                                 <div class='part-item-content-title'>自动报告</div>
                                 <ul class='part-item-content-infos'>
-                                    <li class='part-item-content-info' style='margin-top: 22px;'>报告形式</li>
-                                    <li class='part-item-content-info' style='margin-top: 22px;'>一键化设置</li>
+                                    <li class='part-item-content-info' style='margin-top: 28px;'>报告形式</li>
+                                    <li class='part-item-content-info' style='margin-top: 28px;'>一键化设置</li>
                                 </ul>
                             </div>
                         </div>
@@ -46,8 +53,8 @@
                                 </div>
                                 <div class='part-item-content-title'>实验室管理</div>
                                 <ul class='part-item-content-infos'>
-                                    <li class='part-item-content-info' style='margin-top: 22px;'>样本管理</li>
-                                    <li class='part-item-content-info' style='margin-top: 22px;'>实验管理</li>
+                                    <li class='part-item-content-info' style='margin-top: 28px;'>样本管理</li>
+                                    <li class='part-item-content-info' style='margin-top: 28px;'>实验管理</li>
                                 </ul>
                             </div>
                         </div>
@@ -61,7 +68,7 @@
                                 </div>
                                 <div class='part-item-content-title'>智能办公</div>
                                 <ul class='part-item-content-infos'>
-                                    <li class='part-item-content-info'>订单管理</li>
+                                    <li class='part-item-content-info' style='margin-top:14px;'>订单管理</li>
                                     <li class='part-item-content-info'>权限设置</li>
                                     <li class='part-item-content-info'>销售管理</li>
                                     <li class='part-item-content-info'>回款管理</li>

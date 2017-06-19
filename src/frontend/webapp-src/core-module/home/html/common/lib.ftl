@@ -14,7 +14,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="${contextPath}/common-resource/themes/${theme}/images/logo.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="${contextPath}/base-lib/lib/toastr/toastr.css"></link>
+	<!--
 	<link rel="stylesheet" type="text/css" href="${contextPath}/base-lib/lib/animate.css/animate.css"></link>
+	-->
 	<link rel="stylesheet" type="text/css" href="${contextPath}/base-lib/lib/font-awesome/css/font-awesome.min.css" ></link>
 	<link rel="stylesheet" type="text/css" href="${contextPath}/base-lib/lib/bootstrap/css/bootstrap.min.css" ></link>
 	<link rel="stylesheet" type="text/css" href="${contextPath}/base-lib/lib/bootstrap-dialog/css/bootstrap-dialog.min.css"></link>
