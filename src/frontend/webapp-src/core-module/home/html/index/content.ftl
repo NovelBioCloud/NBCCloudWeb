@@ -1,9 +1,9 @@
-<div class='hidden'>
+<div style="display:none;">
     // 提前加载需要的图片
-    <img src='${contextPath}/corem-module/home/image/part1-image1-active.png'></img>
-    <img src='${contextPath}/corem-module/home/image/part1-image2-active.png'></img>
-    <img src='${contextPath}/corem-module/home/image/part1-image3-active.png'></img>
-    <img src='${contextPath}/corem-module/home/image/part1-image4-active.png'></img>
+    <img src='${contextPath}/core-module/home/image/part1-image1-active.png'></img>
+    <img src='${contextPath}/core-module/home/image/part1-image2-active.png'></img>
+    <img src='${contextPath}/core-module/home/image/part1-image3-active.png'></img>
+    <img src='${contextPath}/core-module/home/image/part1-image4-active.png'></img>
 </div>
 <div class='index-content'>
     <div class='index-part1 index-part'>
@@ -96,7 +96,7 @@
                                     </div>
                                     <div class='part-item-content-title'>并行计算</div>
                                     <ul class='part-item-content-infos'>
-                                        <li class='part-item-content-info'>hadoop计算框架</li>
+                                        <li class='part-item-content-info'>Hadoop框架</li>
                                         <li class='part-item-content-info'>分布式计算</li>
                                         <li class='part-item-content-info'>任务调度</li>
                                         <li class='part-item-content-info'>绩效考核</li>
@@ -111,7 +111,7 @@
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        NovelBrain®云平台采用了互联网最新的大数据技术，集成了Hadoop生态系统中的zookeeper、hdfs、MapReduce、YARN等计算存储框架，并在其上进行二次开发，实现了针对生物大数据的分布式计算和任务调度。同时对部分计算采用CUDA硬件加速，大幅加快计算速度。
+                                        NovelBrain®云平台采用了互联网最新的大数据技术，集成了Hadoop生态系统中的zookeeper、MapReduce、hdfs、YARN等计算存储框架，并在其上进行二次开发，实现了针对生物大数据的分布式计算和任务调度。同时对部分计算采用CUDA硬件加速，大幅加快计算速度。
                                     </div>
                                 </div>
                             </div>
@@ -310,7 +310,7 @@
                                 <li>企业级标准的质控和归档</li>
                                 <li>分析工具、实验监控、智能办公、信息化管理全覆盖</li>
                             </ul>
-                        </div>  
+                        </div>
                     </div>
                     <div class='part-content-spliter'>
                         <div class='content-spliter'></div>
@@ -335,7 +335,7 @@
         <div class='part-title'>合作伙伴及行业动态</div>
         <div class='part-content'>
             <div class='fn-news-container part-bitmap'>
-                
+
             </div>
         </div>
     </div>

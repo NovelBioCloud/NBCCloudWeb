@@ -19,12 +19,15 @@ export class Slider {
         this.size = options.size || 5
         this.duration = options.duration || 10000
         this.enable = !!options.enable
-        this.timer = () => {
+        this.startTimer()
+    }
+    startTimer() {
+        const timeAction = () => {
             if (this.enable) {
                 this.step(1)
             }
         }
-        setInterval(this.timer, this.duration)
+        this.timer = setInterval(timeAction, this.duration)
     }
     go(newIndex: number) {
         this.index = newIndex % this.size
@@ -37,7 +40,7 @@ export class Slider {
         this.onChangeSubject.subscribe(onChange)
     }
     dispose() {
-        clearTimeout(this.timer)
+        clearInterval(this.timer)
     }
 }
 

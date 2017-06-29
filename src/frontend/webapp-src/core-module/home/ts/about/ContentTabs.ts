@@ -6,7 +6,7 @@ import { RecruitmentTable } from './RecruitmentTable'
 
 /**
  * 该类展示about页面的全部内容
- * 
+ *
  * @export
  * @class ContentTabs
  * @extends {ContentTabsSupport}
@@ -36,7 +36,8 @@ export class ContentTabs {
             $(element).click(() => {
                 this.showPart(partName)
             }).hover(() => {
-                this.slider.slideTo(index)
+                this.showPart(partName)
+                // this.slider.slideTo(index)
             }, () => {
                 this.slider.slideToCurrent()
             })
@@ -62,7 +63,10 @@ export class ContentTabs {
         _.times(ContentTabs.partNames.length, (current) => {
             if (current === index) {
                 this.titles.eq(current).addClass('active')
-                this.contents.eq(current).addClass('active')
+                const currentContent = this.contents.eq(current).addClass('active')
+                currentContent.stop(true)
+                currentContent.animate({ opacity: 0 }, 0)
+                currentContent.animate({ opacity: 1 }, 'slow')
             } else {
                 this.titles.eq(current).removeClass('active')
                 this.contents.eq(current).removeClass('active')

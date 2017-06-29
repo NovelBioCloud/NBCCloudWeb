@@ -6,7 +6,7 @@
             <div class='manager-description-content-name' style='margin-top:40px;margin-bottom:50px;'>
                 宗杰<span style='font-family: MicrosoftYaHei;
                 font-size: 24px;color: #0C253D;letter-spacing: 0;margin-left:20px;'>创始人，研发总监</span></div>
-            <div class='manager-description-content-introduction'>
+            <div class='manager-description-content-introduction' style='text-indent:2em;'>
                 上海交通大学生物学专业博士，拥有多项专利。2008年起进入二代测序数据分析领域，为国内第一批接触二代测序的生物信息人才，并活跃于生物信息相关开源社区。2010年成立上海烈冰信息科技有限公司并一直担任研发总监职位。期间领导开发了二代测序相关算法、基因数据库、数据分析软件等。在此基础上领导开发了国内领先的基因测序云计算平台，在该平台的帮助下烈冰公司的数据分析成本远低于领域内其他公司，并帮助客户发表了近100篇国际专业文献。
             </div>
         </div>

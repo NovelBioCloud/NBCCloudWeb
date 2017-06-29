@@ -1,6 +1,6 @@
 <div class='nb-page-about-introduction'>
     <div class='introduction-content'>
-        <p>
+        <p style='text-indent:2em;'>
         上海烈冰生物医药科技有限公司（NovelBio Bio-Pharm Technology Co.,Ltd）
         是一家以生命科学研究与应用开发为发展方向的高新技术企业，
         专注于新一代高通量测序技术和生物信息学分析的应用开发和推广。
@@ -14,10 +14,12 @@
         <div class='introduction-map'></div>
     </div>
     <div class='introduction-content'>
+        <p style='text-indent:2em;'>
         烈冰科技总部位于上海市漕河泾浦江高科技园区，
         拥有大量优秀的生命科学、大数据IT、管理方面的全职员工。
         公司于2016年被评为上海市高新技术企业，承担多项国家创新基金项目，
         拥有多项自主专利技术及软件著作权。
+        </p>
     </div>
     <div>
         <img src='${contextPath}/core-module/home/image/introduction-02.jpg' style='width:100%;margin: 50px 0px 0px 0px;'></img>

@@ -15,9 +15,12 @@ export class BackgroundSlider extends Slider {
         const items = $('.fn-backgroundSlider-control-item')
         items.each((index, elem) => {
             $(elem).hover(() => {
+                this.dispose()
                 if (this.index !== index) {
                     this.go(index)
                 }
+            }, () => {
+                this.startTimer()
             })
         })
         this.change(0)

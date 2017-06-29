@@ -25,7 +25,7 @@
                     <li class='nb-head-nav-ul-li'><a href='${contextPath}/home/about'>关于我们</a></li>
                     <a href='${erpLoginPath}/'>
                         <li class='nb-head-nav-ul-li nb-head-nav-register'>
-                            登陆 / 注册
+                            登 录
                         </li>
                     </a>
                 </ul>
