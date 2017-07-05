@@ -29,7 +29,7 @@
             </ul>
         </div>
         <div class='nb-foot-col-contact nb-foot-info'>
-            <div class='contact-telephone'>021-80322688</div>
+            <div class='contact-telephone'>400-065-1811</div>
             <!--<div class='contact-email'>tech@novelbio.com</div>-->
             <div class='contact-position'>上海市闵行区新骏环路138号漕河泾开发区2号楼2F</div>
         </div>
@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class='nb-foot-version-info'>
-        <p>版权所有@上海烈冰信息科技有限公司 2015
+        <p>版权所有@上海烈冰信息科技有限公司 2017
             &nbsp;&nbsp;<script src="http://s13.cnzz.com/stat.php?id=4520558&amp;web_id=4520558&amp;show=pic" language="JavaScript"></script>
         </p>
     </div>

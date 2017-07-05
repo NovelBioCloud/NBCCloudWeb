@@ -1,4 +1,4 @@
-import axios from 'axios'
+import * as $ from 'jquery'
 
 class ImageList {
     template: string = `<div>
@@ -155,6 +155,6 @@ export class ImageSelector {
         })
     }
     loadData() {
-        return axios.post('cloudFile/getImageList').then(resp => resp.data)
+        return $.post('cloudFile/getImageList')
     }
 }

@@ -8,7 +8,7 @@ class History {
 
 /**
  * 公司发展信息
- * 
+ *
  * @export
  * @class HistoryPanel
  */
@@ -46,16 +46,17 @@ export class HistoryPanel {
                 </div>`)
     }
     private createContentUnit(content: string) {
-        if (!content) {
-            return $('empty-element')
-        }
-        const contentItems = content.split('\n')
+        // const contentItemsString = content.split('\n').filter((value, index) => index < 2)
+        //     .map(item => `<div class='history-content-item'>${item}</div>`)
+        //     .join(' ')
         return $(`<div class='history-content'>
-            <ul class='history-content-items'>` +
-            contentItems.filter((value, index) => index < 2)
-                .map(item => `<li class='history-content-item'>${content}</li>`)
-                .join('') +
-            `</ul>        
+            <div class='history-content-items-table'>
+                <div class='history-content-items-cell'>
+                    <div class='history-content-items'>
+                        <div class='history-content-item'>${content}</div>
+                    </div>
+                </div>
+            </div>
         </div>`)
     }
     private loadData() {
@@ -63,7 +64,8 @@ export class HistoryPanel {
             datas.forEach((data, index) => {
                 this.createTimeUnit(data.time).appendTo(this.timePanel)
                 this.createTimelineUnit().appendTo(this.timelinePanel)
-                this.createContentUnit(data.content).appendTo(this.contentPanel)
+                const unit = this.createContentUnit(data.content)
+                unit.appendTo(this.contentPanel)
             })
         }).catch(console.log)
     }

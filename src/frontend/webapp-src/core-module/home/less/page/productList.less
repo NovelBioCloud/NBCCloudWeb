@@ -42,15 +42,16 @@
         padding: 20px;
     }
     .item-part {
+        display: table;
+        width: 100%;
         background: #FFFFFF;
         border: 1px solid rgba(0, 0, 0, 0.04);
         box-shadow: 0 1px 9px 0 rgba(7, 17, 63, 0.08);
         position: relative;
-        display: flex;
         padding: 40px 40px;
         margin: 0px 0px 50px 0px;
         .item-part-left {
-            flex: none;
+            display: table-cell;
             min-width: 475px;
             .item-part-title {
                 width: 470px;
@@ -73,9 +74,9 @@
             }
         }
         .item-part-right {
-            flex: auto;
-            display: flex;
-            align-items: center;
+            display: table-cell;
+            width: 99%;
+            vertical-align: middle;
             .item-part-content {
                 padding: 0px 0px 0px 40px;
                 opacity: 0.4;

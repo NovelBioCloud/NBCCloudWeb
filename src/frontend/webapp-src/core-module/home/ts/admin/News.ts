@@ -1,6 +1,5 @@
 import * as _ from 'lodash'
 import * as moment from 'moment'
-import axios from 'axios'
 import { ImageSelector } from '../imageSelector/ImageSelector'
 declare const $: any
 export class News {

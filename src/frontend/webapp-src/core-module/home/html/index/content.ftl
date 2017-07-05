@@ -99,8 +99,7 @@
                                         <li class='part-item-content-info'>Hadoop框架</li>
                                         <li class='part-item-content-info'>分布式计算</li>
                                         <li class='part-item-content-info'>任务调度</li>
-                                        <li class='part-item-content-info'>绩效考核</li>
-                                        <li class='part-item-content-info'>cuda硬件加速</li>
+                                        <li class='part-item-content-info'>CUDA硬件加速</li>
                                     </ul>
                                 </div>
                             </div>
@@ -111,7 +110,7 @@
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        NovelBrain®云平台采用了互联网最新的大数据技术，集成了Hadoop生态系统中的zookeeper、MapReduce、hdfs、YARN等计算存储框架，并在其上进行二次开发，实现了针对生物大数据的分布式计算和任务调度。同时对部分计算采用CUDA硬件加速，大幅加快计算速度。
+                                        NovelBrain®云平台采用了互联网最新的大数据技术，集成了Hadoop生态系统中的Zookeeper、MapReduce、HDFS、YARN等计算存储框架，并在其上进行二次开发，实现了针对生物大数据的分布式计算和任务调度。同时对部分计算采用CUDA硬件加速，大幅加快计算速度。
                                     </div>
                                 </div>
                             </div>
@@ -125,20 +124,22 @@
                                         <div class='part-item-content-image-png part-item-content-image-png2'>
                                         </div>
                                     </div>
-                                    <div class='part-item-content-title'>交互简单</div>
+                                    <div class='part-item-content-title'>交互友好</div>
                                     <ul class='part-item-content-infos'>
-                                        <li class='part-item-content-info'>交互简单</li>
+                                        <li class='part-item-content-info'>完美交互体验</li>
+                                        <li class='part-item-content-info'>零代码</li>
+                                        <li class='part-item-content-info'>可视化结果</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class=' fn-slider-animate-active'>
                                 <div class='part-item-content-text'>
-                                    <div class='part-item-content-text-title'>交互简单</div>
+                                    <div class='part-item-content-text-title'>交互友好</div>
                                     <div>
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        平台做到全程“0代码”使用实现，简单拖拽即可实现复杂的分析流程，并可自由上线自己的分析工具。全新的交互和UI设计，加上可配置结果报告，带给您最舒适的用户体验。此外，云平台还整合了基因组浏览器，实现测序数据的可视化展示，方便进行深入分析。
+                                        平台做到全程“零代码”使用实现，简单拖拽即可实现复杂的分析流程，并可自由上线自己的分析工具。全新的交互和UI设计，加上可配置结果报告，带给您最舒适的用户体验。此外，云平台还整合了基因组浏览器，实现测序数据的可视化展示，方便进行深入分析。
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +169,7 @@
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        平台在高可用架构基础上，自主搭建了完善的监控系统，实时监控硬盘是否损坏、CPU运行情况是否正常和网络是否畅通。如某一硬盘有坏道时，即刻报警提示更换硬盘。项目运行中出现错误，也会通过邮件及时向用户报错，保证系统的鲁棒性。
+                                        平台在高可用架构基础上，自主搭建了完善的监控系统，实时监控硬盘是否损坏、CPU运行情况是否正常和网络是否畅通。如某一硬盘有坏道时，即刻报警提示更换硬盘。项目运行中出现错误，也会通过邮件及时向用户报错，保证系统的稳定性。
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +246,7 @@
                                     </div>
                                     <div class='part-item-content-title'>虚拟化</div>
                                     <ul class='part-item-content-infos'>
-                                        <li class='part-item-content-info'>docker镜像</li>
+                                        <li class='part-item-content-info'>Docker镜像</li>
                                         <li class='part-item-content-info'>容器级虚拟化</li>
                                         <li class='part-item-content-info'>结果可重现</li>
                                         <li class='part-item-content-info'>计算环境隔离</li>
@@ -259,7 +260,7 @@
                                         <div class='part-item-content-text-underline'></div>
                                     </div>
                                     <div class='part-item-content-text-content'>
-                                        NovelBrain®云平台采用轻量虚拟化技术docker，同时修改了hadoop-yarn的底层代码，优化了其对docker的支持。一方面实现了计算隔离，保证了系统的安全性；另一方面通过虚拟化机制实现分析软件和算法的一致性，保证数据分析可重现。
+                                        NovelBrain®云平台采用轻量虚拟化技术Docker，同时修改了Hadoop-Yarn的底层代码，优化了其对Docker的支持。一方面实现了计算隔离，保证了系统的安全性；另一方面通过虚拟化机制实现分析软件和算法的一致性，保证数据分析可重现。
                                     </div>
                                 </div>
                             </div>

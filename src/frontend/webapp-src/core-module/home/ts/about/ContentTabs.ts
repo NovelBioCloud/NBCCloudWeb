@@ -1,4 +1,3 @@
-import { Subject } from 'rxjs'
 import * as _ from 'lodash'
 import { HistoryPanel } from './HistoryPanel'
 import { RecruitmentTable } from './RecruitmentTable'

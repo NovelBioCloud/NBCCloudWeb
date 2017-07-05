@@ -1,7 +1,7 @@
 import * as polyfill from '../common/polyfill'
 
 import { ContentTabs } from '../about/ContentTabs'
-import * as $ from 'jquery'
+declare const $
 
 $(() => {
     const defaultPanel = (location.hash || '').replace('#', '')

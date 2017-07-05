@@ -1,7 +1,6 @@
 import * as polyfill from '../common/polyfill'
-import * as $ from 'jquery'
-import axios from 'axios'
 import * as moment from 'moment'
+declare const $
 
 $(() => {
     const newsContent = $('.fn-news-content')
@@ -60,7 +59,7 @@ class StudyModule {
         })
     }
     loadData() {
-        return axios.post('home/video/getList').then(resp => resp.data)
+        return $.post('home/video/getList')
     }
     createFirstItem(data) {
         this.element.find('.fn-first-item-container').empty()
@@ -126,8 +125,6 @@ class NewsModule {
 
     }
     loadData() {
-        return axios.post('home/news/getList').then(resp => {
-            return resp.data
-        })
+        return $.post('home/news/getList')
     }
 }

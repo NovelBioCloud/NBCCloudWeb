@@ -1,10 +1,9 @@
 import * as polyfill from '../common/polyfill'
-
 import { BackgroundSlider } from '../index/BackgroundSlider'
-declare const $: JQueryStatic
 import * as _ from 'lodash'
-import axios from 'axios'
 import * as moment from 'moment'
+declare const $: JQueryStatic
+
 $(() => {
     new BackgroundSlider()
     new NewsContent()
@@ -99,7 +98,7 @@ class NewsContent {
         this.element = $(_.template(this.template)({ newsList: tempList })).appendTo(this.container)
     }
     loadData() {
-        return axios.get('home/news/getLastList?size=4').then(resp => resp.data)
+        return $.get('home/news/getLastList?size=4')
     }
 }
 class NewsInfo {

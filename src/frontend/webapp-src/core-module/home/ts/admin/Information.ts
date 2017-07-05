@@ -1,6 +1,5 @@
 import * as _ from 'lodash'
 import * as moment from 'moment'
-import axios from 'axios'
 declare const $: any
 export class Information {
     element: JQuery

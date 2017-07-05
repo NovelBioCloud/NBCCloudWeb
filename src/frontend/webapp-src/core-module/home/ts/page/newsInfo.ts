@@ -1,9 +1,7 @@
 import * as polyfill from '../common/polyfill'
-
 import { ContentTabs } from '../about/ContentTabs'
-import * as $ from 'jquery'
 import * as qs from 'querystring'
-import axios from 'axios'
+declare const $: JQueryStatic
 $(() => {
     const query = qs.parse(location.search.replace('?', ''))
     const info = new NewsInfo()
@@ -27,7 +25,7 @@ class NewsInfo {
                 } else {
                     this.showMessage(data.message || '文件不存在。。。')
                 }
-            }).catch(() => {
+            }).fail(() => {
                 this.showMessage('数据加载错误。。。')
             })
         }
@@ -37,7 +35,7 @@ class NewsInfo {
         this.container.empty()
         const $iframe = $(`<iframe src='${link}' style='border:0px;width:100%;min-height: 1000px;' scrolling="no"></iframe>`)
         this.container.append($iframe)
-        // 定义一个函数，定时调用并刷新iframe高度  
+        // 定义一个函数，定时调用并刷新iframe高度
         function reinitIframe() {
             const iframe = $iframe.get(0) as HTMLIFrameElement
             try {
@@ -56,9 +54,7 @@ class NewsInfo {
     }
     loadData(id) {
         this.showMessage('数据加载中')
-        return axios.post('home/news/get', qs.stringify({ id: id })).then((resp) => {
-            return resp.data
-        })
+        return $.post('home/news/get', { id: id })
     }
 
 }

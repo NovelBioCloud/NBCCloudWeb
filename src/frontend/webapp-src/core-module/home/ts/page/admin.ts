@@ -1,12 +1,10 @@
 import * as polyfill from '../common/polyfill'
 import { AdminApp } from '../admin/AdminApp'
-import axios from 'axios'
+declare const $: JQueryStatic
 import * as qs from 'querystring'
-declare const $
 
 $(() => {
-    axios.post('admin/isLogin').then((resp) => {
-        const data = resp.data
+    $.post('admin/isLogin').then((data) => {
         if (data.state) {
             new AdminApp()
         } else {
@@ -37,9 +35,7 @@ $(() => {
         submit.click(() => {
             const username = login.find('[name="username"]').val()
             const password = login.find('[name="password"]').val()
-            axios.post('admin/login', qs.stringify({ username: username, password: password })).then((resp) => {
-                return resp.data
-            }).then(data => {
+            $.post('admin/login', { username: username, password: password }).then(data => {
                 if (data.state) {
                     login.remove()
                     new AdminApp()
