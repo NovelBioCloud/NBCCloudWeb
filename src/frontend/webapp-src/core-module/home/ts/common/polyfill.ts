@@ -1,1 +1,2 @@
-export * from '../../../../common-widget/polyfill'
+require('bable-polyfill')
+export const installed = 0

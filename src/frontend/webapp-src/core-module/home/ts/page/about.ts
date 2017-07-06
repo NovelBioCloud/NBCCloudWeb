@@ -4,6 +4,6 @@ import { ContentTabs } from '../about/ContentTabs'
 declare const $
 
 $(() => {
-    const defaultPanel = (location.hash || '').replace('#', '')
-    new ContentTabs(defaultPanel)
+	const defaultPanel = (location.hash || '').replace('#', '')
+	new ContentTabs(defaultPanel)
 })
