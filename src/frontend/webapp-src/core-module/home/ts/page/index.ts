@@ -8,10 +8,14 @@ $(() => {
 	new BackgroundSlider()
 	new NewsContent()
 	$('.fn-slider-animate').each((index, element) => {
-		const slider = new Slider()
+		const slider = new HoverChanger()
+		const container = $(element)
 		slider.init({
-			container: $(element),
+			container: container,
+			defaultElement: container.find('.fn-slider-animate-default'),
+			hoverElement: container.find('.fn-slider-animate-active')
 		})
+		slider.start()
 	})
 })
 class NewsContent {
@@ -104,41 +108,46 @@ class NewsContent {
 class NewsInfo {
 	constructor(public title, public publishDate, public link, public description) { }
 }
-class Slider {
+class HoverChanger {
 
 	container: JQuery
 	defaultContainer: JQuery
 	activeContainer: JQuery
-	init({ container }) {
+	init({ container, defaultElement, hoverElement }) {
 		this.container = container
-		this.defaultContainer = this.container.find('.fn-slider-animate-default')
-		this.activeContainer = this.container.find('.fn-slider-animate-active')
+		this.defaultContainer = defaultElement
+		this.activeContainer = hoverElement
 		this.defaultContainer.css({
 			'z-index': 0,
 			'position': 'absolute',
-			width: '100%'
+			'width': '100%'
 		})
 		this.activeContainer.css({
 			'z-index': 1,
 			'position': 'absolute',
-			// 'transition': 'all 0.6s ease-in-out',
 			'top': 0,
-			width: '100%'
-		}).addClass('hidden')
-		const height = this.container.height()
-
-		this.container.hover(() => {
-			this.activeContainer.removeClass('hidden animated flipInY')
-				.addClass('animated flipInY').one('animationend', () => {
-					this.activeContainer.removeClass('animated flipInY')
-				})
-		}, () => {
-			this.activeContainer.removeClass('hidden animated flipOutY')
-				.addClass('animated flipOutY').one('animationend', () => {
-					this.activeContainer.removeClass('animated flipOutY')
-					this.activeContainer.addClass('hidden')
-				})
+			'display': 'none',
+			'width': '100%'
 		})
 	}
 
+	public start() {
+		this.container.hover(() => {
+			this.activeContainer.stop().slideDown()
+			// this.activeContainer.removeClass('hidden animated flipInY')
+			// 	.addClass('animated flipInY').one('animationend', () => {
+			// 		this.activeContainer.removeClass('animated flipInY')
+			// 	})
+		}, () => {
+			this.activeContainer.stop().slideUp()
+			// this.activeContainer.removeClass('hidden animated flipOutY')
+			// 	.addClass('animated flipOutY').one('animationend', () => {
+			// 		this.activeContainer.removeClass('animated flipOutY')
+			// 		this.activeContainer.addClass('hidden')
+			// 	})
+		})
+	}
+	public stop() {
+		this.container.off('hover')
+	}
 }
