@@ -33,7 +33,7 @@ public class MgmtCloudFileEntity {
 
 	public void save(CloudFileEntity entity, InputStream is) {
 		Path parentPath = entity.getStorePath().getParent();
-		if (!FileOperate.isFileFolderExist(parentPath)) {
+		if (!FileOperate.isFileExist(parentPath)) {
 			FileOperate.createFolders(parentPath);
 		}
 		TxtReadandWrite txtRw = new TxtReadandWrite(entity.getStorePath(), true);
