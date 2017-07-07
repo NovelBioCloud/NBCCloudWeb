@@ -33,7 +33,8 @@ class NewsInfo {
 	showSrc(link) {
 		this.timer && window.clearInterval(this.timer)
 		this.container.empty()
-		const $iframe = $(`<iframe src='${link}' style='border:0px;width:100%;min-height: 1000px;' scrolling="no"></iframe>`)
+		const encodeLink = encodeURI(link)
+		const $iframe = $(`<iframe src='${encodeLink}' style='border:0px;width:100%;min-height: 1000px;' scrolling="no"></iframe>`)
 		this.container.append($iframe)
 		// 定义一个函数，定时调用并刷新iframe高度
 		function reinitIframe() {

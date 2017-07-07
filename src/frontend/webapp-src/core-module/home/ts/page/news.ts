@@ -67,13 +67,13 @@ class StudyModule {
 		const item = $(this.firstItemTemplate).appendTo(this.element.find('.fn-first-item-container'))
 		item.find('.fn-video-title').html(data.title)
 		item.find('.fn-video-play').click(() => {
-			window.open(data.link)
+			window.open(encodeURI(data.link))
 		})
-		item.find('.fn-video-image').prop('src', data.image)
+		item.find('.fn-video-image').prop('src', encodeURI(data.image))
 	}
 	createItem(data) {
 		const item = $(this.itemTemplate).appendTo(this.element.find('.fn-items-container'))
-		item.find('.fn-image').prop('src', data.image).click(() => {
+		item.find('.fn-image').prop('src', encodeURI(data.image)).click(() => {
 			this.createFirstItem(data)
 		})
 		item.find('.fn-title').html(data.title).click(() => {
@@ -115,11 +115,11 @@ class NewsModule {
 	}
 	createItem(data) {
 		const item = $(this.itemTemplate).appendTo(this.element.find('.fn-message-items'))
-		item.find('.fn-image').prop('src', data.image).click(() => {
-			window.open('home/newsInfo?id=' + data.id)
+		item.find('.fn-image').prop('src', encodeURI(data.image)).click(() => {
+			window.open(encodeURI('home/newsInfo?id=' + data.id))
 		})
 		item.find('.fn-title').html(data.title).click(() => {
-			window.open('home/newsInfo?id=' + data.id)
+			window.open(encodeURI('home/newsInfo?id=' + data.id))
 		})
 		item.find('.fn-publishDate').html(moment(data.publishDate).format('YYYY-MM-DD'))
 		item.find('.fn-description').html(data.description)
