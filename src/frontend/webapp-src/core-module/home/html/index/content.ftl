@@ -96,9 +96,9 @@
                                     </div>
                                     <div class='part-item-content-title'>并行计算</div>
                                     <ul class='part-item-content-infos'>
-                                        <li class='part-item-content-info'>Hadoop框架</li>
-                                        <li class='part-item-content-info'>分布式计算</li>
                                         <li class='part-item-content-info'>任务调度</li>
+                                        <li class='part-item-content-info'>分布式计算</li>
+                                        <li class='part-item-content-info'>Hadoop框架</li>
                                         <li class='part-item-content-info'>CUDA硬件加速</li>
                                     </ul>
                                 </div>
@@ -126,9 +126,10 @@
                                     </div>
                                     <div class='part-item-content-title'>交互友好</div>
                                     <ul class='part-item-content-infos'>
-                                        <li class='part-item-content-info'>完美交互体验</li>
                                         <li class='part-item-content-info'>零代码</li>
+                                        <li class='part-item-content-info'>拖拽式操作</li>
                                         <li class='part-item-content-info'>可视化结果</li>
+                                        <li class='part-item-content-info'>完美交互体验</li>
                                     </ul>
                                 </div>
                             </div>
@@ -157,8 +158,8 @@
                                     <ul class='part-item-content-infos'>
                                         <li class='part-item-content-info'>高可用框架</li>
                                         <li class='part-item-content-info'>硬件实时监控</li>
-                                        <li class='part-item-content-info'>系统自动化运维</li>
                                         <li class='part-item-content-info'>错误自动报警</li>
+                                        <li class='part-item-content-info'>系统自动化运维</li>
                                     </ul>
                                 </div>
                             </div>
@@ -190,6 +191,7 @@
                                         <li class='part-item-content-info'>多级权限控制</li>
                                         <li class='part-item-content-info'>非对称性加密</li>
                                         <li class='part-item-content-info'>数据多份拷贝</li>
+										<li class='part-item-content-info'>SSL传输加密</li>
                                     </ul>
                                 </div>
                             </div>
