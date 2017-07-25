@@ -2,7 +2,7 @@
 <div class='nb-page-about-culture'>
     <div class='culture-description'>
         <div>
-            <img src='${contextPath}/core-module/home/image/culture-group.jpg' style='width:100%;margin:0 0 100px 0;'></img>
+            <img src='${contextPath}/biz-module/home/image/culture-group.jpg' style='width:100%;margin:0 0 100px 0;'></img>
         </div>
         <div class='culture-description-title'>烈冰文化</div>
         <div class='culture-description-content'>
@@ -16,11 +16,11 @@
         <div class='culture-description-title'>办公环境</div>
         <div style="display:flex;margin:50px 0px;">
             <div style="display: flex;width:70%;">
-                <img src="${contextPath}/core-module/home/image/culture-01.jpg" style="margin:0;flex:1;">
+                <img src="${contextPath}/biz-module/home/image/culture-01.jpg" style="margin:0;flex:1;">
             </div>
             <div style="display:flex;flex: 1;padding: 0px 20px;flex-direction: column;">
-                <img src="${contextPath}/core-module/home/image/culture-02.jpg" style="margin: 0 0px 20px 0px;flex:1;">
-                <img src="${contextPath}/core-module/home/image/culture-03.jpg" style="margin:0;flex:1;">
+                <img src="${contextPath}/biz-module/home/image/culture-02.jpg" style="margin: 0 0px 20px 0px;flex:1;">
+                <img src="${contextPath}/biz-module/home/image/culture-03.jpg" style="margin:0;flex:1;">
             </div>
         </div>
         <div class='culture-description-content'>
@@ -33,7 +33,7 @@
         <div>
         </div>
         <div class='culture-description-title'>公司活动</div>
-        <div> <img src='${contextPath}/core-module/home/image/culture-all.jpg' style='width:100%;margin:0 0 50px;'></img></div>
+        <div> <img src='${contextPath}/biz-module/home/image/culture-all.jpg' style='width:100%;margin:0 0 50px;'></img></div>
         <div class='culture-description-content'>
             <p style='text-indent:2em;'>
             每月举办员工生日会、乒乓球赛等团建活动，公司内部设立健身房，丰富员工工作生活。

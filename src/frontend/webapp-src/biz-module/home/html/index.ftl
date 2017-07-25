@@ -5,8 +5,8 @@
 <head>
 	<#include "common/lib.ftl"/>
 	<title>首页</title> 
-	<link rel="stylesheet" type="text/css" href="${contextPath}/core-module/home/css/index.css" />
-	<script type="text/javascript" src="${contextPath}/core-module/home/js/index.js" ></script>
+	<link rel="stylesheet" type="text/css" href="${contextPath}/biz-module/home/css/index.css" />
+	<script type="text/javascript" src="${contextPath}/biz-module/home/js/index.js" ></script>
 </head>
 <body>
 	<#include "common/head.ftl"/>

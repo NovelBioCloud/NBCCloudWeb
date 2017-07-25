@@ -22,6 +22,6 @@
         </p>
     </div>
     <div>
-        <img src='${contextPath}/core-module/home/image/introduction-02.jpg' style='width:100%;margin: 50px 0px 0px 0px;'></img>
+        <img src='${contextPath}/biz-module/home/image/introduction-02.jpg' style='width:100%;margin: 50px 0px 0px 0px;'></img>
     </div>    
 </div>

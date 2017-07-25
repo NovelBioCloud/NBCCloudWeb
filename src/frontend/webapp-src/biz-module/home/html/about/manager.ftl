@@ -1,6 +1,6 @@
 
 <div class='nb-page-about-manager'>
-    <div> <img src='${contextPath}/core-module/home/image/team-all.jpg' style='width:100%;margin:0 0 100px 0;'></img></div>
+    <div> <img src='${contextPath}/biz-module/home/image/team-all.jpg' style='width:100%;margin:0 0 100px 0;'></img></div>
     <div class='manager-description'>
         <div class='manager-description-content' style='padding-right:150px;'>
             <div class='manager-description-content-name' style='margin-top:40px;margin-bottom:50px;'>
@@ -11,12 +11,12 @@
             </div>
         </div>
         <div class='manager-description-image' style=''>
-            <img src='${contextPath}/core-module/home/image/team-01.jpg' style='width:384;height:489px;margin-right:10px;'></img>
+            <img src='${contextPath}/biz-module/home/image/team-01.jpg' style='width:384;height:489px;margin-right:10px;'></img>
         </div>
     </div>
     <div class='manager-description'>
         <div class='manager-description-image'>
-            <img src='${contextPath}/core-module/home/image/team-02.jpg' style='width:384;height:489px;margin-left:10px;'></img></div>
+            <img src='${contextPath}/biz-module/home/image/team-02.jpg' style='width:384;height:489px;margin-left:10px;'></img></div>
         <div class='manager-description-content' style='padding-left:150px;'>
             <div class='manager-description-content-name' style='margin-top:40px;margin-bottom:50px;'>
                 陈岱<span style='font-family: MicrosoftYaHei;
@@ -36,11 +36,11 @@
             </div>
         </div>
         <div class='manager-description-image'>
-            <img src='${contextPath}/core-module/home/image/team-03.jpg' style='width:384;height:489px;margin-right:10px;'></img></div>
+            <img src='${contextPath}/biz-module/home/image/team-03.jpg' style='width:384;height:489px;margin-right:10px;'></img></div>
     </div>
     <div class='manager-description'>
         <div class='manager-description-image'>
-            <img src='${contextPath}/core-module/home/image/team-04.jpg' style='width:384;height:489px;margin-left:10px;'></img></div>
+            <img src='${contextPath}/biz-module/home/image/team-04.jpg' style='width:384;height:489px;margin-left:10px;'></img></div>
         <div class='manager-description-content' style='padding-left:150px;'>
             <div class='manager-description-content-name' style='margin-top:40px;margin-bottom:50px;'>
                 张博<span style='font-family: MicrosoftYaHei;
@@ -58,11 +58,11 @@
             </div>
         </div>
         <div class='manager-description-image'>
-            <img src='${contextPath}/core-module/home/image/team-05.jpg' style='width:384;height:489px;margin-right:10px;'></img></div>
+            <img src='${contextPath}/biz-module/home/image/team-05.jpg' style='width:384;height:489px;margin-right:10px;'></img></div>
     </div>
     <div class='manager-description'>
         <div class='manager-description-image'>
-            <img src='${contextPath}/core-module/home/image/team-06.jpg' style='width:384;height:489px;margin-left:10px;'></img></div>
+            <img src='${contextPath}/biz-module/home/image/team-06.jpg' style='width:384;height:489px;margin-left:10px;'></img></div>
         <div class='manager-description-content' style='padding-left:150px;'>
             <div class='manager-description-content-name' style='margin-top:40px;margin-bottom:50px;'>
                 刘志刚<span style='font-family: MicrosoftYaHei;
@@ -80,11 +80,11 @@
             </div>
         </div>
         <div class='manager-description-image'>
-            <img src='${contextPath}/core-module/home/image/team-07.jpg' style='width:384;height:489px;margin-right:10px;'></img></div>
+            <img src='${contextPath}/biz-module/home/image/team-07.jpg' style='width:384;height:489px;margin-right:10px;'></img></div>
     </div>
     <div class='manager-description'>
         <div class='manager-description-image'>
-            <img src='${contextPath}/core-module/home/image/team-08.jpg' style='width:384;height:489px;margin-left:10px;'></img></div>
+            <img src='${contextPath}/biz-module/home/image/team-08.jpg' style='width:384;height:489px;margin-left:10px;'></img></div>
         <div class='manager-description-content' style='padding-left:150px;'>
             <div class='manager-description-content-name' style='margin-top:40px;margin-bottom:50px;'>
                 侯朋伟<span style='font-family: MicrosoftYaHei;
@@ -102,7 +102,7 @@
             </div>
         </div>
         <div class='manager-description-image'>
-            <img src='${contextPath}/core-module/home/image/team-09.jpg' style='width:384;height:489px;margin-right:10px;'></img></div>
+            <img src='${contextPath}/biz-module/home/image/team-09.jpg' style='width:384;height:489px;margin-right:10px;'></img></div>
     </div>
 
 </div>

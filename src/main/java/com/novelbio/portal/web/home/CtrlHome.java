@@ -21,7 +21,7 @@ public class CtrlHome extends AbstractController {
 
 	@RequestMapping(value = { "test" })
 	public String test() {
-		return "core-module/home/html/test";
+		return "biz-module/home/html/test";
 	}
 
 	@RequestMapping(value = { "" })
@@ -31,47 +31,47 @@ public class CtrlHome extends AbstractController {
 
 	@RequestMapping(value = { "index" })
 	public String index() {
-		return "core-module/home/html/index";
+		return "biz-module/home/html/index";
 	}
 
 	@RequestMapping(value = "/productList1")
 	public String productList1() {
-		return "core-module/home/html/productList1";
+		return "biz-module/home/html/productList1";
 	}
 
 	@RequestMapping(value = "/productList2")
 	public String productList2() {
-		return "core-module/home/html/productList2";
+		return "biz-module/home/html/productList2";
 	}
 
 	@RequestMapping(value = "/productList3")
 	public String productList3() {
-		return "core-module/home/html/productList3";
+		return "biz-module/home/html/productList3";
 	}
 
 	@RequestMapping(value = "/productList4")
 	public String productList4() {
-		return "core-module/home/html/productList4";
+		return "biz-module/home/html/productList4";
 	}
 
 	@RequestMapping(value = "/product")
 	public String product() {
-		return "core-module/home/html/product";
+		return "biz-module/home/html/product";
 	}
 
 	@RequestMapping(value = "/news")
 	public String news() {
-		return "core-module/home/html/news";
+		return "biz-module/home/html/news";
 	}
 
 	@RequestMapping(value = "/newsInfo")
 	public String newsInfo() {
-		return "core-module/home/html/newsInfo";
+		return "biz-module/home/html/newsInfo";
 	}
 
 	@RequestMapping(value = "/about")
 	public String about() {
-		return "core-module/home/html/about";
+		return "biz-module/home/html/about";
 	}
 
 }

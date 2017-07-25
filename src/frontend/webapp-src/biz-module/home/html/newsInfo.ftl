@@ -4,10 +4,12 @@
 <head>
 	<@page.head>
 	<title>行业动态</title>
-  	<link rel="stylesheet" type="text/css" href="${contextPath}/core-module/home/css/newsInfo.css" />
-	<script type="text/javascript" src="${contextPath}/core-module/home/js/newsInfo.js" ></script>
+  	<link rel="stylesheet" type="text/css" href="${contextPath}/biz-module/home/css/newsInfo.css" />
+	<script type="text/javascript" src="${contextPath}/biz-module/home/js/newsInfo.js" ></script>
 	</@page.head>
-	<script></script>
+	<script>
+		 document.domain = "novelbrain.com"
+	</script>
 </head>
 <body>
 	<@page.body>

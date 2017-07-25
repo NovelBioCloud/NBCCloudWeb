@@ -1,9 +1,9 @@
 <div style="display:none;">
     // 提前加载需要的图片
-    <img src='${contextPath}/core-module/home/image/part1-image1-active.png'></img>
-    <img src='${contextPath}/core-module/home/image/part1-image2-active.png'></img>
-    <img src='${contextPath}/core-module/home/image/part1-image3-active.png'></img>
-    <img src='${contextPath}/core-module/home/image/part1-image4-active.png'></img>
+    <img src='${contextPath}/biz-module/home/image/part1-image1-active.png'></img>
+    <img src='${contextPath}/biz-module/home/image/part1-image2-active.png'></img>
+    <img src='${contextPath}/biz-module/home/image/part1-image3-active.png'></img>
+    <img src='${contextPath}/biz-module/home/image/part1-image4-active.png'></img>
 </div>
 <div class='index-content'>
     <div class='index-part1 index-part'>

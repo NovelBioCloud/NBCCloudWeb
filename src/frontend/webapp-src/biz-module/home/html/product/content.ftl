@@ -5,7 +5,7 @@
                 <a href='${contextPath}/home/productList1' target='_blank'>
                     <div class='product-item-image-png'>
                         <div class='img-wrap'>
-                            <img src='${contextPath}/core-module/home/image/product-1.png'/>
+                            <img src='${contextPath}/biz-module/home/image/product-1.png'/>
                         </div>
                     </div>
                 </a>
@@ -39,7 +39,7 @@
                 <a href='${contextPath}/home/productList2' target='_blank'>
                     <div class='product-item-image-png'>
                         <div class='img-wrap'>
-                            <img src='${contextPath}/core-module/home/image/product-2.png'/>
+                            <img src='${contextPath}/biz-module/home/image/product-2.png'/>
                         </div>
                     </div>
                 </a>
@@ -50,7 +50,7 @@
                 <a href='${contextPath}/home/productList3' target='_blank'>
                     <div class='product-item-image-png'>
                         <div class='img-wrap'>
-                            <img src='${contextPath}/core-module/home/image/product-3.png'/>
+                            <img src='${contextPath}/biz-module/home/image/product-3.png'/>
                         </div>
                     </div>
                 </a>
@@ -83,7 +83,7 @@
                 <a href='${contextPath}/home/productList4' target='_blank'>
                     <div class='product-item-image-png'>
                         <div class='img-wrap'>
-                            <img src='${contextPath}/core-module/home/image/product-4.png'/>
+                            <img src='${contextPath}/biz-module/home/image/product-4.png'/>
                         </div>
                     </div>
                 </a>

@@ -6,5 +6,5 @@ module.exports = [{
 	path: 'webapp-src/common-resource/themes/config.js',
 }, {
 	name: 'home',
-	path: 'webapp-src/core-module/home/config.js',
+	path: 'webapp-src/biz-module/home/config.js',
 }];

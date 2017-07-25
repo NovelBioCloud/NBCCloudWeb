@@ -5,7 +5,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>定制流程</div>
             <div class='item-part-img'>
-                <img src='${contextPath}/core-module/home/image/image1-1.png'></img>
+                <img src='${contextPath}/biz-module/home/image/image1-1.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -19,7 +19,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>项目管理</div>
             <div class='item-part-img'>
-                <img src='${contextPath}/core-module/home/image/image1-2.png'></img>
+                <img src='${contextPath}/biz-module/home/image/image1-2.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -32,7 +32,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>任务监控</div>
             <div class='item-part-img'>
-                <img src='${contextPath}/core-module/home/image/image1-3.png'></img>
+                <img src='${contextPath}/biz-module/home/image/image1-3.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -46,7 +46,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>基因组浏览器</div>
             <div class='item-part-img'>
-                <img src='${contextPath}/core-module/home/image/image1-4.png'></img>
+                <img src='${contextPath}/biz-module/home/image/image1-4.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -60,7 +60,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>数据库</div>
             <div class='item-part-img'>
-                <img src='${contextPath}/core-module/home/image/image1-5.png'></img>
+                <img src='${contextPath}/biz-module/home/image/image1-5.png'></img>
             </div>
         </div>
         <div class='item-part-right'>

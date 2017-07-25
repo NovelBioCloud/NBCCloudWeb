@@ -25,7 +25,7 @@ public class CtrlAdminRecruitment extends AbstractController {
 
 	@RequestMapping
 	String index() {
-		return "core-module/home/html/admin";
+		return "biz-module/home/html/admin";
 	}
 
 	@ResponseBody

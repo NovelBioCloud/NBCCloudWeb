@@ -5,8 +5,8 @@
 <head>
 	<@page.head>
 		<title>功能介绍</title>
-		<link rel="stylesheet" type="text/css" href="${contextPath}/core-module/home/css/productList.css" ></link>
-		<script type="text/javascript" src="${contextPath}/core-module/home/js/productList.js" ></script>
+		<link rel="stylesheet" type="text/css" href="${contextPath}/biz-module/home/css/productList.css" ></link>
+		<script type="text/javascript" src="${contextPath}/biz-module/home/js/productList.js" ></script>
 	</@page.head>
 </head>
 <body>

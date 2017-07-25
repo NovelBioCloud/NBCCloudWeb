@@ -6,7 +6,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>样本管理</div>
             <div class='item-part-img'>
-                <img src='${contextPath}/core-module/home/image/image3-1.png'></img>
+                <img src='${contextPath}/biz-module/home/image/image3-1.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
@@ -21,7 +21,7 @@
         <div class='item-part-left'>
             <div class='item-part-title'>实验管理</div>
             <div class='item-part-img'>
-                <img src='${contextPath}/core-module/home/image/image3-2.png'></img>
+                <img src='${contextPath}/biz-module/home/image/image3-2.png'></img>
             </div>
         </div>
         <div class='item-part-right'>
