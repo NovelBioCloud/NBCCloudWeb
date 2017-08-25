@@ -1,8 +1,7 @@
 <div class='nb-page-about-introduction'>
     <div class='introduction-content'>
         <p style='text-indent:2em;'>
-        上海烈冰信息科技有限公司（NovelBio Bio-Pharm Technology Co.,Ltd）
-        是一家以生命科学研究与应用开发为发展方向的高新技术企业，
+        上海烈冰信息科技有限公司是一家以生命科学研究与应用开发为发展方向的高新技术企业，
         专注于新一代高通量测序技术和生物信息学分析的应用开发和推广。
         主营业务涵盖科研服务、NovelBrain®云计算和转化医学三大领域，并通过科研业务确保技术时刻处于国际领先水平，
         通过基于互联网IT技术支撑的云计算为更多用户提供高效智能的系统平台，
