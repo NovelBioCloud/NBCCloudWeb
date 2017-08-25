@@ -20,6 +20,7 @@
             <nav class='nb-head-nav'>
                 <ul class='nb-head-nav-ul'>
                     <li class='nb-head-nav-ul-li'><a href='${contextPath}/home/index'>首页</a></li>
+                    <li class='nb-head-nav-ul-li'><a href='https://docsite.novelbrain.com/docsite/doc/01_%E5%B9%B3%E5%8F%B0%E8%AF%B4%E6%98%8E/01_%E5%B9%B3%E5%8F%B0%E7%AE%80%E4%BB%8B.md'>平台简介</a></li>
                     <li class='nb-head-nav-ul-li'><a href='${contextPath}/home/product'>功能介绍</a></li>
                     <li class='nb-head-nav-ul-li'><a href='${contextPath}/home/news'>行业动态</a></li>
                     <li class='nb-head-nav-ul-li'><a href='${contextPath}/home/about'>关于我们</a></li>
