@@ -26,7 +26,7 @@
 		/> -->
 	<!-- 实际环境配置文件 -->
 	<context:property-placeholder
-		location="classpath:settings-production.properties" />
+		location="classpath:settings.properties" />
 	<context:component-scan base-package="com.novelbio.portal.biz.mgmt" />
 	<!-- 一些连接属性的设置 -->
 	<mongo:mongo id="mongo" replica-set="${mongo.url}">
