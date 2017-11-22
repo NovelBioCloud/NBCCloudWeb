@@ -76,10 +76,12 @@ export class CloudFile {
 						formData.append('uploadFile', file, file.name)
 						formData.append('path', form.find('[name=path]').val())
 						formData.append('description', form.find('[name=description]').val())
-						this.create(formData).then(() => {
-							this.refresh()
-							dialog.dialog('close').dialog('destroy').remove()
-						}, msg => this.message(`保存失败${msg}!`))
+						this.create(formData).then((data) => {
+							if (data.state) {
+								this.refresh()
+								dialog.dialog('close').dialog('destroy').remove()
+							}
+						}, msg => this.message(`保存失败!`))
 					}
 				}
 			}, {
@@ -158,7 +160,19 @@ export class CloudFile {
 			`
 	}
 	create(postData) {
-		return $.post(PathUtil.resolve('admin/cloudFile/create'), postData).then(data => data.result)
+		// return $.post(PathUtil.resolve('admin/cloudFile/create'), postData).then(data => data.result)
+		return $.ajax({
+			url: PathUtil.resolve('admin/cloudFile/create'),
+			type: 'POST',
+			cache: false,
+			data: postData,
+			processData: false,
+			success: (data) => {
+				return data.result
+			},
+			contentType: false
+		})
+
 	}
 	update(postData) {
 		return $.post(PathUtil.resolve('admin/cloudFile/update'), postData).then(data => data.result)
