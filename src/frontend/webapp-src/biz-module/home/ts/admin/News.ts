@@ -2,6 +2,7 @@ import * as _ from 'lodash'
 import * as moment from 'moment'
 import { PathUtil } from '../common/PathUtil'
 import { ImageSelector } from '../imageSelector/ImageSelector'
+import { FileSelector } from '../newsSelecter/FileSelector'
 interface JQuery {
 	tabs: (...args) => any
 	datagrid: (...args) => any
@@ -140,8 +141,12 @@ export class News {
 							<table>
 								<tr>
 									<td>文档链接:</td>
-									<td><input class="easyui-validatebox fn-link" type="text" name="link"
-									data-options="required:true,validType:'url'" value="${link}"></input></td>
+									<td>
+										<input class="easyui-validatebox fn-link" type="text" name="link"
+											data-options="required:true,validType:'url'" value="${link}"></input>
+										<br/>
+										<button class='fn-select-news' type='button'>选择</button>
+									</td>
 								</tr>
 								<tr>
 									<td>标题:</td>
@@ -224,6 +229,13 @@ export class News {
 				dialogContent.find('.fn-image-img').prop('src', value)
 			}
 		}
+		dialogContent.find('.fn-select-news').click(() => {
+			new FileSelector().init({
+				onClick: (url) => {
+					dialogContent.find('.fn-link').val(url)
+				}
+			})
+		})
 		dialogContent.find('.fn-image-img').click(() => {
 			new ImageSelector().init({
 				isSingleSelect: true,
