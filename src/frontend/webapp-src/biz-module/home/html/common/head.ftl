@@ -23,6 +23,7 @@
                     <li class='nb-head-nav-ul-li'><a href='${contextPath}/home/product'>功能介绍</a></li>
                     <li class='nb-head-nav-ul-li'><a href='${contextPath}/home/news'>行业动态</a></li>
                     <li class='nb-head-nav-ul-li'><a href='${contextPath}/home/about'>关于我们</a></li>
+                    <li class="nb-head-nav-ul-li"><a href="https://docsite.novelbrain.com/docsite/doc/001_帮助文档/01_平台简介.md">帮助文档</a></li>
                     <a href='${erpLoginPath}/'>
                         <li class='nb-head-nav-ul-li nb-head-nav-register'>
                             登 录
