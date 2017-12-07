@@ -2,6 +2,6 @@
 .vscode
 node_modules
 target
-dataSource-dev.properties
-dataSource-proc.properties
 /src/frontend/webapp
+package-lock.json
+/.classpath
