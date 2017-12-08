@@ -6,7 +6,9 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
@@ -17,6 +19,7 @@ import org.springframework.util.StreamUtils;
 import com.novelbio.base.dataOperate.TxtReadandWrite;
 import com.novelbio.base.fileOperate.FileOperate;
 import com.novelbio.portal.base.MIMETypes;
+import com.novelbio.portal.base.MultipartFileSender;
 import com.novelbio.portal.biz.entity.CloudFileEntity;
 import com.novelbio.portal.biz.model.CloudFile;
 
@@ -39,6 +42,20 @@ public class MgmtCloudFileEntity {
 		TxtReadandWrite txtRw = new TxtReadandWrite(entity.getStorePath(), true);
 		txtRw.writefile(is);
 		txtRw.close();
+	}
+
+	public void write(CloudFileEntity entity, HttpServletRequest httpRequest, HttpServletResponse httpResponse) {
+		Path path = entity.getStorePath();
+		try {
+			httpResponse.setHeader("Accept-Ranges", "bytes");
+			httpResponse.setHeader("Access-Control-Allow-Methods", "GET, HEAD");
+			httpResponse.setHeader("Access-Control-Allow-Origin", "*");
+			httpResponse.setHeader("Access-Control-Expose-Headers", "Content-Length, Content-Type");
+			httpResponse.setHeader("Access-Control-Max-Age", "3000");
+			MultipartFileSender.fromFile(path.toFile()).with(httpRequest).with(httpResponse).serveResource();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void write(CloudFileEntity entity, HttpServletResponse response, boolean download) {

@@ -15,6 +15,11 @@ public class CtrlHomeVideo extends AbstractController {
 	@Autowired
 	MgmtVideo mgmtNews;
 
+	@RequestMapping("player")
+	String player() {
+		return "biz-module/home/html/videoPlayer";
+	}
+
 	@ResponseBody
 	@RequestMapping("getList")
 	ResultJson getList() {

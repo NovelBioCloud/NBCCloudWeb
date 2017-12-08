@@ -39,7 +39,19 @@ public class CtrlCloudFile {
 			}
 		}
 	}
-
+	@RequestMapping("getFileStream")
+	void getFileStream(String id, HttpServletResponse response) {
+		try {
+			CloudFile file = mgmtCloudFile.get(id);
+			CloudFileEntity entity = mgmtCloudFileEntity.create(file);
+			mgmtCloudFileEntity.write(entity, response, false);
+		} catch (Exception e) {
+			try {
+				response.sendError(500);
+			} catch (IOException e1) {
+			}
+		}
+	}
 	@RequestMapping("download")
 	void download(String id, HttpServletResponse response) {
 		try {

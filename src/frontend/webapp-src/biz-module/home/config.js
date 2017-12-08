@@ -41,6 +41,10 @@ module.exports = {
         {
             source: 'webapp-src/biz-module/home/less/page/admin.less',
             target: 'webapp/biz-module/home/css/'
+        },
+        {
+            source: 'webapp-src/biz-module/home/less/page/videoPlayer.less',
+            target: 'webapp/biz-module/home/css/'
         }
     ],
     es6: [
@@ -81,5 +85,10 @@ module.exports = {
             target: 'webapp/biz-module/home/js',
             name: 'admin.js'
         },
+        {
+            source: ['webapp-src/biz-module/home/ts/page/videoPlayer.ts'],
+            target: 'webapp/biz-module/home/js',
+            name: 'videoPlayer.js'
+        }
     ]
 }
