@@ -3,7 +3,7 @@ import * as queryString from 'query-string'
 export class VideoModule {
 	template = `<div class='fn-video-module' style='text-align:center;'>
 		<h1 class='fn-video-title' style='margin:50px auto 30px auto;'></h1>
-		<div class='fn-video-player-container' style='padding:30px;margin:0 100px 50px 100px;background:hsl(210, 10%, 30%);'>
+		<div class='fn-video-player-container' style='padding:30px 0px 60px;margin:0 100px 80px 100px;background:hsl(210, 10%, 30%);'>
 			<video class='fn-video-player' controls preload='auto' style='width:800px;height:500px;margin:auto;'/>
 		</div>
 	</div>`

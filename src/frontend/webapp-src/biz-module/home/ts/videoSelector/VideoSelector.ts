@@ -46,7 +46,7 @@ class VideoList {
 			onPlay: (data) => {
 				this.player.prop('src', '')
 				if (data) {
-					this.player.prop('src', `cloudFile/getInputStream?id=${data.id}`)
+					this.player.prop('src', `home/video/player?id=${data.id}`)
 				}
 			}
 		})
