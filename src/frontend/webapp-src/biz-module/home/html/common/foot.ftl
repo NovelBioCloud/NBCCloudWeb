@@ -44,7 +44,8 @@
     </div>
     <div class='nb-foot-version-info'>
         <p>版权所有@上海烈冰信息科技有限公司 2017
-            &nbsp;&nbsp;<script src="http://s13.cnzz.com/stat.php?id=4520558&amp;web_id=4520558&amp;show=pic" language="JavaScript"></script>
+            &nbsp;&nbsp;
+			<!--<script src="http://s13.cnzz.com/stat.php?id=4520558&amp;web_id=4520558&amp;show=pic" language="JavaScript"></script>-->
         </p>
     </div>
 </div>

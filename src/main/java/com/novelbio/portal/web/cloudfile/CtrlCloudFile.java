@@ -14,7 +14,9 @@ import com.novelbio.portal.biz.entity.CloudFileEntity;
 import com.novelbio.portal.biz.mgmt.MgmtCloudFile;
 import com.novelbio.portal.biz.mgmt.MgmtCloudFileEntity;
 import com.novelbio.portal.biz.mgmt.MgmtCloudFileView;
+import com.novelbio.portal.biz.mgmt.MgmtVideo;
 import com.novelbio.portal.biz.model.CloudFile;
+import com.novelbio.portal.biz.model.Video;
 
 @Controller
 @RequestMapping(value = "/cloudFile")
@@ -25,6 +27,8 @@ public class CtrlCloudFile {
 	MgmtCloudFileEntity mgmtCloudFileEntity;
 	@Autowired
 	MgmtCloudFileView mgmtCloudFileView;
+	@Autowired
+	MgmtVideo mgmtVideo;
 
 	@RequestMapping("getInputStream")
 	void getInputStream(String id, HttpServletResponse response) {
@@ -39,6 +43,7 @@ public class CtrlCloudFile {
 			}
 		}
 	}
+
 	@RequestMapping("getFileStream")
 	void getFileStream(String id, HttpServletResponse response) {
 		try {
@@ -52,6 +57,7 @@ public class CtrlCloudFile {
 			}
 		}
 	}
+
 	@RequestMapping("download")
 	void download(String id, HttpServletResponse response) {
 		try {
@@ -64,6 +70,13 @@ public class CtrlCloudFile {
 			} catch (IOException e1) {
 			}
 		}
+	}
+
+	@RequestMapping("getVideo")
+	@ResponseBody
+	ResultJson getVideo(String id) {
+		CloudFile file = mgmtCloudFile.get(id);
+		return new ResultJson(file != null, "", file);
 	}
 
 	@RequestMapping("getVideoList")

@@ -11,7 +11,7 @@
 </head>
 <body>
 	<@page.body>
-	<div class='fn-flv-container' style='background:hsl(210, 13%, 21%);margin: 100px;'></div>
+	<div class='fn-flv-container'></div>
 	</@page.body>
 </body>
 </html>
