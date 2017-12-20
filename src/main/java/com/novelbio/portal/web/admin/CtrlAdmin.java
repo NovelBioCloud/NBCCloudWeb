@@ -42,6 +42,13 @@ public class CtrlAdmin extends AbstractController {
 		return new ResultJson(flag, "");
 	}
 
+	@RequestMapping("logout")
+	@ResponseBody
+	ResultJson logout(HttpSession session) {
+		session.removeAttribute("user");
+		return new ResultJson(true, "");
+	}
+
 	@RequestMapping("login")
 	@ResponseBody
 	ResultJson login(String username, String password, HttpSession session) {
@@ -50,7 +57,7 @@ public class CtrlAdmin extends AbstractController {
 		user.setPassword(password);
 		UserEntity userEntity = new UserEntity(user);
 		boolean flag = userEntity.isLogin();
-		if (flag) {
+		if (flag) { 
 			session.setAttribute("user", userEntity);
 		} else {
 			session.removeAttribute("user");
