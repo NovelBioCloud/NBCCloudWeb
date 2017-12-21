@@ -4,6 +4,9 @@
 		"allowJs": true,
 		"jsx": "react",
 		"target": "es5",
+		"types": [
+			"node"
+		],
 		"typeRoots": [],
 		"lib": [
 			"dom",
